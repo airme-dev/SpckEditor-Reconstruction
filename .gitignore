@@ -1,0 +1,8 @@
+.gradle/
+local.properties
+**/build/
+*.iml
+.idea/
+.DS_Store
+Thumbs.db
+__pycache__/

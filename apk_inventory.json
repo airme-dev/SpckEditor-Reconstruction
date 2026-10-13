@@ -1,0 +1,3578 @@
+[
+  {
+    "path": "AndroidManifest.xml",
+    "size_bytes": 26244
+  },
+  {
+    "path": "DebugProbesKt.bin",
+    "size_bytes": 1728
+  },
+  {
+    "path": "META-INF/CHANGES",
+    "size_bytes": 90639
+  },
+  {
+    "path": "META-INF/README.md",
+    "size_bytes": 3093
+  },
+  {
+    "path": "META-INF/androidx/annotation/annotation/LICENSE.txt",
+    "size_bytes": 10175
+  },
+  {
+    "path": "META-INF/androidx/collection/collection/LICENSE.txt",
+    "size_bytes": 10175
+  },
+  {
+    "path": "META-INF/androidx/collection/collection-ktx/LICENSE.txt",
+    "size_bytes": 10175
+  },
+  {
+    "path": "META-INF/androidx/constraintlayout/constraintlayout-core/LICENSE.txt",
+    "size_bytes": 10175
+  },
+  {
+    "path": "META-INF/androidx/lifecycle/lifecycle-common/LICENSE.txt",
+    "size_bytes": 10175
+  },
+  {
+    "path": "META-INF/androidx/lifecycle/lifecycle-common-java8/LICENSE.txt",
+    "size_bytes": 10175
+  },
+  {
+    "path": "META-INF/androidx.activity_activity-compose.version",
+    "size_bytes": 7
+  },
+  {
+    "path": "META-INF/androidx.activity_activity-ktx.version",
+    "size_bytes": 7
+  },
+  {
+    "path": "META-INF/androidx.activity_activity.version",
+    "size_bytes": 7
+  },
+  {
+    "path": "META-INF/androidx.annotation_annotation-experimental.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.appcompat_appcompat-resources.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.appcompat_appcompat.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.arch.core_core-runtime.version",
+    "size_bytes": 67
+  },
+  {
+    "path": "META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.autofill_autofill.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.biometric_biometric.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.browser_browser.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.camera.featurecombinationquery_featurecombinationquery.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.camera_camera-camera2.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.camera_camera-core.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.camera_camera-lifecycle.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.camera_camera-video.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.camera_camera-view.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.animation_animation-core.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.animation_animation.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.foundation_foundation-layout.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.foundation_foundation.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.material3.adaptive_adaptive.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.material3_material3.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.material_material-icons-core.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.material_material-ripple.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.material_material.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.runtime_runtime-annotation.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.runtime_runtime-saveable.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.runtime_runtime.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui-geometry.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui-graphics.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui-text-google-fonts.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui-text.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui-tooling-preview.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui-unit.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui-util.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.compose.ui_ui.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.constraintlayout_constraintlayout-compose.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.constraintlayout_constraintlayout.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.coordinatorlayout_coordinatorlayout.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.core_core-ktx.version",
+    "size_bytes": 7
+  },
+  {
+    "path": "META-INF/androidx.core_core-viewtree.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.core_core.version",
+    "size_bytes": 7
+  },
+  {
+    "path": "META-INF/androidx.credentials_credentials-play-services-auth.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.credentials_credentials.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.cursoradapter_cursoradapter.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.customview_customview-poolingcontainer.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.customview_customview.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.documentfile_documentfile.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.drawerlayout_drawerlayout.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.emoji2_emoji2-views-helper.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.emoji2_emoji2.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.exifinterface_exifinterface.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.fragment_fragment-ktx.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.fragment_fragment.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.graphics_graphics-path.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.interpolator_interpolator.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.legacy_legacy-support-core-ui.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.legacy_legacy-support-core-utils.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.legacy_legacy-support-v4.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-livedata-core.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-livedata.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-process.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-runtime-compose.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-runtime.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-compose.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.lifecycle_lifecycle-viewmodel.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.loader_loader.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.media_media.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.navigationevent_navigationevent-compose.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.navigationevent_navigationevent.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.print_print.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.profileinstaller_profileinstaller.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.savedstate_savedstate-compose.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.savedstate_savedstate-ktx.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.savedstate_savedstate.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.slidingpanelayout_slidingpanelayout.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.startup_startup-runtime.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.tracing_tracing-ktx.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.tracing_tracing.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.vectordrawable_vectordrawable-animated.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.vectordrawable_vectordrawable.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.versionedparcelable_versionedparcelable.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.viewpager_viewpager.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.webkit_webkit.version",
+    "size_bytes": 7
+  },
+  {
+    "path": "META-INF/androidx.window.extensions.core_core.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.window_window-core.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/androidx.window_window.version",
+    "size_bytes": 6
+  },
+  {
+    "path": "META-INF/com/android/build/gradle/app-metadata.properties",
+    "size_bytes": 56
+  },
+  {
+    "path": "META-INF/kotlinx_coroutines_android.version",
+    "size_bytes": 5
+  },
+  {
+    "path": "META-INF/kotlinx_coroutines_core.version",
+    "size_bytes": 5
+  },
+  {
+    "path": "META-INF/kotlinx_coroutines_play_services.version",
+    "size_bytes": 5
+  },
+  {
+    "path": "META-INF/nanohttpd/default-mimetypes.properties",
+    "size_bytes": 667
+  },
+  {
+    "path": "META-INF/nanohttpd/mimetypes.properties",
+    "size_bytes": 74
+  },
+  {
+    "path": "META-INF/services/com.revenuecat.purchases.paywalls.PaywallAssetWarmer",
+    "size_bytes": 73
+  },
+  {
+    "path": "META-INF/services/de0",
+    "size_bytes": 3
+  },
+  {
+    "path": "META-INF/services/f8",
+    "size_bytes": 3
+  },
+  {
+    "path": "META-INF/version-control-info.textproto",
+    "size_bytes": 120
+  },
+  {
+    "path": "assets/assets/ace/keybinding-emacs.js",
+    "size_bytes": 24079
+  },
+  {
+    "path": "assets/assets/ace/keybinding-sublime.js",
+    "size_bytes": 7874
+  },
+  {
+    "path": "assets/assets/ace/keybinding-vscode.js",
+    "size_bytes": 5804
+  },
+  {
+    "path": "assets/assets/ace/mode-abap.js",
+    "size_bytes": 6126
+  },
+  {
+    "path": "assets/assets/ace/mode-abc.js",
+    "size_bytes": 5098
+  },
+  {
+    "path": "assets/assets/ace/mode-actionscript.js",
+    "size_bytes": 20926
+  },
+  {
+    "path": "assets/assets/ace/mode-ada.js",
+    "size_bytes": 2623
+  },
+  {
+    "path": "assets/assets/ace/mode-apache_conf.js",
+    "size_bytes": 14242
+  },
+  {
+    "path": "assets/assets/ace/mode-apex.js",
+    "size_bytes": 8704
+  },
+  {
+    "path": "assets/assets/ace/mode-aql.js",
+    "size_bytes": 3435
+  },
+  {
+    "path": "assets/assets/ace/mode-asciidoc.js",
+    "size_bytes": 8479
+  },
+  {
+    "path": "assets/assets/ace/mode-asl.js",
+    "size_bytes": 8957
+  },
+  {
+    "path": "assets/assets/ace/mode-assembly_x86.js",
+    "size_bytes": 9224
+  },
+  {
+    "path": "assets/assets/ace/mode-batchfile.js",
+    "size_bytes": 5187
+  },
+  {
+    "path": "assets/assets/ace/mode-c9search.js",
+    "size_bytes": 4398
+  },
+  {
+    "path": "assets/assets/ace/mode-c_cpp.js",
+    "size_bytes": 12434
+  },
+  {
+    "path": "assets/assets/ace/mode-cirru.js",
+    "size_bytes": 3332
+  },
+  {
+    "path": "assets/assets/ace/mode-clojure.js",
+    "size_bytes": 9017
+  },
+  {
+    "path": "assets/assets/ace/mode-cobol.js",
+    "size_bytes": 2634
+  },
+  {
+    "path": "assets/assets/ace/mode-coffee.js",
+    "size_bytes": 7778
+  },
+  {
+    "path": "assets/assets/ace/mode-coldfusion.js",
+    "size_bytes": 63047
+  },
+  {
+    "path": "assets/assets/ace/mode-crystal.js",
+    "size_bytes": 10323
+  },
+  {
+    "path": "assets/assets/ace/mode-csharp.js",
+    "size_bytes": 9120
+  },
+  {
+    "path": "assets/assets/ace/mode-csp.js",
+    "size_bytes": 1568
+  },
+  {
+    "path": "assets/assets/ace/mode-css_ls.js",
+    "size_bytes": 25508
+  },
+  {
+    "path": "assets/assets/ace/mode-d.js",
+    "size_bytes": 9272
+  },
+  {
+    "path": "assets/assets/ace/mode-dart.js",
+    "size_bytes": 15917
+  },
+  {
+    "path": "assets/assets/ace/mode-diff.js",
+    "size_bytes": 2740
+  },
+  {
+    "path": "assets/assets/ace/mode-dockerfile.js",
+    "size_bytes": 8538
+  },
+  {
+    "path": "assets/assets/ace/mode-dot.js",
+    "size_bytes": 7890
+  },
+  {
+    "path": "assets/assets/ace/mode-drools.js",
+    "size_bytes": 11571
+  },
+  {
+    "path": "assets/assets/ace/mode-edifact.js",
+    "size_bytes": 3151
+  },
+  {
+    "path": "assets/assets/ace/mode-eiffel.js",
+    "size_bytes": 3166
+  },
+  {
+    "path": "assets/assets/ace/mode-ejs.js",
+    "size_bytes": 80645
+  },
+  {
+    "path": "assets/assets/ace/mode-elixir.js",
+    "size_bytes": 16071
+  },
+  {
+    "path": "assets/assets/ace/mode-elm.js",
+    "size_bytes": 5258
+  },
+  {
+    "path": "assets/assets/ace/mode-erlang.js",
+    "size_bytes": 30080
+  },
+  {
+    "path": "assets/assets/ace/mode-forth.js",
+    "size_bytes": 7316
+  },
+  {
+    "path": "assets/assets/ace/mode-fortran.js",
+    "size_bytes": 8757
+  },
+  {
+    "path": "assets/assets/ace/mode-fsharp.js",
+    "size_bytes": 5765
+  },
+  {
+    "path": "assets/assets/ace/mode-fsl.js",
+    "size_bytes": 5037
+  },
+  {
+    "path": "assets/assets/ace/mode-ftl.js",
+    "size_bytes": 32697
+  },
+  {
+    "path": "assets/assets/ace/mode-gcode.js",
+    "size_bytes": 1751
+  },
+  {
+    "path": "assets/assets/ace/mode-gherkin.js",
+    "size_bytes": 2688
+  },
+  {
+    "path": "assets/assets/ace/mode-gitignore.js",
+    "size_bytes": 1224
+  },
+  {
+    "path": "assets/assets/ace/mode-golang.js",
+    "size_bytes": 7183
+  },
+  {
+    "path": "assets/assets/ace/mode-graphqlschema.js",
+    "size_bytes": 3815
+  },
+  {
+    "path": "assets/assets/ace/mode-groovy.js",
+    "size_bytes": 22520
+  },
+  {
+    "path": "assets/assets/ace/mode-haml.js",
+    "size_bytes": 46042
+  },
+  {
+    "path": "assets/assets/ace/mode-handlebars.js",
+    "size_bytes": 62342
+  },
+  {
+    "path": "assets/assets/ace/mode-haskell.js",
+    "size_bytes": 11851
+  },
+  {
+    "path": "assets/assets/ace/mode-haskell_cabal.js",
+    "size_bytes": 2607
+  },
+  {
+    "path": "assets/assets/ace/mode-haxe.js",
+    "size_bytes": 6801
+  },
+  {
+    "path": "assets/assets/ace/mode-hjson.js",
+    "size_bytes": 6297
+  },
+  {
+    "path": "assets/assets/ace/mode-html_elixir.js",
+    "size_bytes": 77714
+  },
+  {
+    "path": "assets/assets/ace/mode-html_ls.js",
+    "size_bytes": 60674
+  },
+  {
+    "path": "assets/assets/ace/mode-html_ruby.js",
+    "size_bytes": 80976
+  },
+  {
+    "path": "assets/assets/ace/mode-ini.js",
+    "size_bytes": 3025
+  },
+  {
+    "path": "assets/assets/ace/mode-io.js",
+    "size_bytes": 5666
+  },
+  {
+    "path": "assets/assets/ace/mode-ion.js",
+    "size_bytes": 8006
+  },
+  {
+    "path": "assets/assets/ace/mode-jack.js",
+    "size_bytes": 6086
+  },
+  {
+    "path": "assets/assets/ace/mode-jade.js",
+    "size_bytes": 47903
+  },
+  {
+    "path": "assets/assets/ace/mode-java.js",
+    "size_bytes": 23389
+  },
+  {
+    "path": "assets/assets/ace/mode-javascript_ls.js",
+    "size_bytes": 19565
+  },
+  {
+    "path": "assets/assets/ace/mode-jexl.js",
+    "size_bytes": 5109
+  },
+  {
+    "path": "assets/assets/ace/mode-json.js",
+    "size_bytes": 5548
+  },
+  {
+    "path": "assets/assets/ace/mode-json5.js",
+    "size_bytes": 6246
+  },
+  {
+    "path": "assets/assets/ace/mode-jsp.js",
+    "size_bytes": 37879
+  },
+  {
+    "path": "assets/assets/ace/mode-jssm.js",
+    "size_bytes": 6220
+  },
+  {
+    "path": "assets/assets/ace/mode-jsx.js",
+    "size_bytes": 7225
+  },
+  {
+    "path": "assets/assets/ace/mode-jsx_ls.js",
+    "size_bytes": 7769
+  },
+  {
+    "path": "assets/assets/ace/mode-julia.js",
+    "size_bytes": 7866
+  },
+  {
+    "path": "assets/assets/ace/mode-kotlin.js",
+    "size_bytes": 12271
+  },
+  {
+    "path": "assets/assets/ace/mode-latex.js",
+    "size_bytes": 5360
+  },
+  {
+    "path": "assets/assets/ace/mode-less.js",
+    "size_bytes": 23858
+  },
+  {
+    "path": "assets/assets/ace/mode-less_ls.js",
+    "size_bytes": 24353
+  },
+  {
+    "path": "assets/assets/ace/mode-lisp.js",
+    "size_bytes": 2281
+  },
+  {
+    "path": "assets/assets/ace/mode-livescript.js",
+    "size_bytes": 5399
+  },
+  {
+    "path": "assets/assets/ace/mode-logiql.js",
+    "size_bytes": 6026
+  },
+  {
+    "path": "assets/assets/ace/mode-logtalk.js",
+    "size_bytes": 10920
+  },
+  {
+    "path": "assets/assets/ace/mode-lua.js",
+    "size_bytes": 7905
+  },
+  {
+    "path": "assets/assets/ace/mode-luapage.js",
+    "size_bytes": 69260
+  },
+  {
+    "path": "assets/assets/ace/mode-lucene.js",
+    "size_bytes": 2763
+  },
+  {
+    "path": "assets/assets/ace/mode-makefile.js",
+    "size_bytes": 6917
+  },
+  {
+    "path": "assets/assets/ace/mode-markdown.js",
+    "size_bytes": 129840
+  },
+  {
+    "path": "assets/assets/ace/mode-matlab.js",
+    "size_bytes": 20889
+  },
+  {
+    "path": "assets/assets/ace/mode-maze.js",
+    "size_bytes": 5246
+  },
+  {
+    "path": "assets/assets/ace/mode-mediawiki.js",
+    "size_bytes": 9691
+  },
+  {
+    "path": "assets/assets/ace/mode-mel.js",
+    "size_bytes": 25211
+  },
+  {
+    "path": "assets/assets/ace/mode-mips.js",
+    "size_bytes": 5625
+  },
+  {
+    "path": "assets/assets/ace/mode-mixal.js",
+    "size_bytes": 3164
+  },
+  {
+    "path": "assets/assets/ace/mode-mushcode.js",
+    "size_bytes": 7003
+  },
+  {
+    "path": "assets/assets/ace/mode-mysql.js",
+    "size_bytes": 8184
+  },
+  {
+    "path": "assets/assets/ace/mode-nginx.js",
+    "size_bytes": 16214
+  },
+  {
+    "path": "assets/assets/ace/mode-nim.js",
+    "size_bytes": 6937
+  },
+  {
+    "path": "assets/assets/ace/mode-nix.js",
+    "size_bytes": 14706
+  },
+  {
+    "path": "assets/assets/ace/mode-nsis.js",
+    "size_bytes": 10558
+  },
+  {
+    "path": "assets/assets/ace/mode-objectivec.js",
+    "size_bytes": 68686
+  },
+  {
+    "path": "assets/assets/ace/mode-ocaml.js",
+    "size_bytes": 15910
+  },
+  {
+    "path": "assets/assets/ace/mode-partiql.js",
+    "size_bytes": 12879
+  },
+  {
+    "path": "assets/assets/ace/mode-pascal.js",
+    "size_bytes": 4505
+  },
+  {
+    "path": "assets/assets/ace/mode-perl.js",
+    "size_bytes": 7743
+  },
+  {
+    "path": "assets/assets/ace/mode-pgsql.js",
+    "size_bytes": 59067
+  },
+  {
+    "path": "assets/assets/ace/mode-php.js",
+    "size_bytes": 501450
+  },
+  {
+    "path": "assets/assets/ace/mode-pig.js",
+    "size_bytes": 6637
+  },
+  {
+    "path": "assets/assets/ace/mode-plain_text.js",
+    "size_bytes": 836
+  },
+  {
+    "path": "assets/assets/ace/mode-plsql.js",
+    "size_bytes": 6198
+  },
+  {
+    "path": "assets/assets/ace/mode-powershell.js",
+    "size_bytes": 84661
+  },
+  {
+    "path": "assets/assets/ace/mode-praat.js",
+    "size_bytes": 10718
+  },
+  {
+    "path": "assets/assets/ace/mode-prolog.js",
+    "size_bytes": 8695
+  },
+  {
+    "path": "assets/assets/ace/mode-properties.js",
+    "size_bytes": 1425
+  },
+  {
+    "path": "assets/assets/ace/mode-protobuf.js",
+    "size_bytes": 14128
+  },
+  {
+    "path": "assets/assets/ace/mode-puppet.js",
+    "size_bytes": 7426
+  },
+  {
+    "path": "assets/assets/ace/mode-python.js",
+    "size_bytes": 8262
+  },
+  {
+    "path": "assets/assets/ace/mode-python_ls.js",
+    "size_bytes": 8718
+  },
+  {
+    "path": "assets/assets/ace/mode-r.js",
+    "size_bytes": 5350
+  },
+  {
+    "path": "assets/assets/ace/mode-raku.js",
+    "size_bytes": 17881
+  },
+  {
+    "path": "assets/assets/ace/mode-razor.js",
+    "size_bytes": 68259
+  },
+  {
+    "path": "assets/assets/ace/mode-rdoc.js",
+    "size_bytes": 5004
+  },
+  {
+    "path": "assets/assets/ace/mode-red.js",
+    "size_bytes": 12881
+  },
+  {
+    "path": "assets/assets/ace/mode-redshift.js",
+    "size_bytes": 8368
+  },
+  {
+    "path": "assets/assets/ace/mode-rhtml.js",
+    "size_bytes": 65540
+  },
+  {
+    "path": "assets/assets/ace/mode-rst.js",
+    "size_bytes": 3381
+  },
+  {
+    "path": "assets/assets/ace/mode-ruby.js",
+    "size_bytes": 19953
+  },
+  {
+    "path": "assets/assets/ace/mode-rust.js",
+    "size_bytes": 6937
+  },
+  {
+    "path": "assets/assets/ace/mode-sac.js",
+    "size_bytes": 6960
+  },
+  {
+    "path": "assets/assets/ace/mode-sass.js",
+    "size_bytes": 17034
+  },
+  {
+    "path": "assets/assets/ace/mode-scad.js",
+    "size_bytes": 6834
+  },
+  {
+    "path": "assets/assets/ace/mode-scala.js",
+    "size_bytes": 22659
+  },
+  {
+    "path": "assets/assets/ace/mode-scheme.js",
+    "size_bytes": 3976
+  },
+  {
+    "path": "assets/assets/ace/mode-scrypt.js",
+    "size_bytes": 7446
+  },
+  {
+    "path": "assets/assets/ace/mode-scss_ls.js",
+    "size_bytes": 25509
+  },
+  {
+    "path": "assets/assets/ace/mode-sh.js",
+    "size_bytes": 7501
+  },
+  {
+    "path": "assets/assets/ace/mode-sjs.js",
+    "size_bytes": 20630
+  },
+  {
+    "path": "assets/assets/ace/mode-smithy.js",
+    "size_bytes": 9012
+  },
+  {
+    "path": "assets/assets/ace/mode-snippets.js",
+    "size_bytes": 4054
+  },
+  {
+    "path": "assets/assets/ace/mode-space.js",
+    "size_bytes": 2553
+  },
+  {
+    "path": "assets/assets/ace/mode-sparql.js",
+    "size_bytes": 8183
+  },
+  {
+    "path": "assets/assets/ace/mode-sql.js",
+    "size_bytes": 4841
+  },
+  {
+    "path": "assets/assets/ace/mode-sqlserver.js",
+    "size_bytes": 16924
+  },
+  {
+    "path": "assets/assets/ace/mode-stylus.js",
+    "size_bytes": 15853
+  },
+  {
+    "path": "assets/assets/ace/mode-svg.js",
+    "size_bytes": 31390
+  },
+  {
+    "path": "assets/assets/ace/mode-swift.js",
+    "size_bytes": 7287
+  },
+  {
+    "path": "assets/assets/ace/mode-tcl.js",
+    "size_bytes": 6516
+  },
+  {
+    "path": "assets/assets/ace/mode-terraform.js",
+    "size_bytes": 7122
+  },
+  {
+    "path": "assets/assets/ace/mode-tex.js",
+    "size_bytes": 3080
+  },
+  {
+    "path": "assets/assets/ace/mode-text.js",
+    "size_bytes": 328
+  },
+  {
+    "path": "assets/assets/ace/mode-textile.js",
+    "size_bytes": 2448
+  },
+  {
+    "path": "assets/assets/ace/mode-toml.js",
+    "size_bytes": 2520
+  },
+  {
+    "path": "assets/assets/ace/mode-tsx_ls.js",
+    "size_bytes": 22253
+  },
+  {
+    "path": "assets/assets/ace/mode-turtle.js",
+    "size_bytes": 5352
+  },
+  {
+    "path": "assets/assets/ace/mode-typescript_ls.js",
+    "size_bytes": 21747
+  },
+  {
+    "path": "assets/assets/ace/mode-vala.js",
+    "size_bytes": 16834
+  },
+  {
+    "path": "assets/assets/ace/mode-vbscript.js",
+    "size_bytes": 11995
+  },
+  {
+    "path": "assets/assets/ace/mode-verilog.js",
+    "size_bytes": 3189
+  },
+  {
+    "path": "assets/assets/ace/mode-vhdl.js",
+    "size_bytes": 2518
+  },
+  {
+    "path": "assets/assets/ace/mode-xml.js",
+    "size_bytes": 12223
+  },
+  {
+    "path": "assets/assets/ace/mode-yaml.js",
+    "size_bytes": 5076
+  },
+  {
+    "path": "assets/assets/ace/mode-zeek.js",
+    "size_bytes": 9411
+  },
+  {
+    "path": "assets/assets/ace/snippets/abap.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/abc.js",
+    "size_bytes": 1274
+  },
+  {
+    "path": "assets/assets/ace/snippets/actionscript.js",
+    "size_bytes": 3309
+  },
+  {
+    "path": "assets/assets/ace/snippets/ada.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/apache_conf.js",
+    "size_bytes": 339
+  },
+  {
+    "path": "assets/assets/ace/snippets/apex.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/applescript.js",
+    "size_bytes": 339
+  },
+  {
+    "path": "assets/assets/ace/snippets/aql.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/asciidoc.js",
+    "size_bytes": 336
+  },
+  {
+    "path": "assets/assets/ace/snippets/asl.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/assembly_x86.js",
+    "size_bytes": 340
+  },
+  {
+    "path": "assets/assets/ace/snippets/autohotkey.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/batchfile.js",
+    "size_bytes": 337
+  },
+  {
+    "path": "assets/assets/ace/snippets/c9search.js",
+    "size_bytes": 336
+  },
+  {
+    "path": "assets/assets/ace/snippets/c_cpp.js",
+    "size_bytes": 2992
+  },
+  {
+    "path": "assets/assets/ace/snippets/cirru.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/clojure.js",
+    "size_bytes": 2371
+  },
+  {
+    "path": "assets/assets/ace/snippets/cobol.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/coffee.js",
+    "size_bytes": 2563
+  },
+  {
+    "path": "assets/assets/ace/snippets/coldfusion.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/crystal.js",
+    "size_bytes": 335
+  },
+  {
+    "path": "assets/assets/ace/snippets/csharp.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/csound_document.js",
+    "size_bytes": 641
+  },
+  {
+    "path": "assets/assets/ace/snippets/csound_orchestra.js",
+    "size_bytes": 1413
+  },
+  {
+    "path": "assets/assets/ace/snippets/csound_score.js",
+    "size_bytes": 340
+  },
+  {
+    "path": "assets/assets/ace/snippets/csp.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/css.js",
+    "size_bytes": 19977
+  },
+  {
+    "path": "assets/assets/ace/snippets/css_ls.js",
+    "size_bytes": 2844
+  },
+  {
+    "path": "assets/assets/ace/snippets/curly.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/d.js",
+    "size_bytes": 329
+  },
+  {
+    "path": "assets/assets/ace/snippets/dart.js",
+    "size_bytes": 1647
+  },
+  {
+    "path": "assets/assets/ace/snippets/diff.js",
+    "size_bytes": 879
+  },
+  {
+    "path": "assets/assets/ace/snippets/dockerfile.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/dot.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/drools.js",
+    "size_bytes": 700
+  },
+  {
+    "path": "assets/assets/ace/snippets/edifact.js",
+    "size_bytes": 4648
+  },
+  {
+    "path": "assets/assets/ace/snippets/eiffel.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/ejs.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/elixir.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/elm.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/erlang.js",
+    "size_bytes": 3904
+  },
+  {
+    "path": "assets/assets/ace/snippets/forth.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/fortran.js",
+    "size_bytes": 335
+  },
+  {
+    "path": "assets/assets/ace/snippets/fsharp.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/fsl.js",
+    "size_bytes": 453
+  },
+  {
+    "path": "assets/assets/ace/snippets/ftl.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/gcode.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/gherkin.js",
+    "size_bytes": 335
+  },
+  {
+    "path": "assets/assets/ace/snippets/gitignore.js",
+    "size_bytes": 337
+  },
+  {
+    "path": "assets/assets/ace/snippets/glsl.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/golang.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/graphqlschema.js",
+    "size_bytes": 999
+  },
+  {
+    "path": "assets/assets/ace/snippets/groovy.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/haml.js",
+    "size_bytes": 776
+  },
+  {
+    "path": "assets/assets/ace/snippets/handlebars.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/haskell.js",
+    "size_bytes": 2306
+  },
+  {
+    "path": "assets/assets/ace/snippets/haskell_cabal.js",
+    "size_bytes": 341
+  },
+  {
+    "path": "assets/assets/ace/snippets/haxe.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/hjson.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/html_elixir.js",
+    "size_bytes": 339
+  },
+  {
+    "path": "assets/assets/ace/snippets/html_ls.js",
+    "size_bytes": 15055
+  },
+  {
+    "path": "assets/assets/ace/snippets/html_ruby.js",
+    "size_bytes": 337
+  },
+  {
+    "path": "assets/assets/ace/snippets/ini.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/io.js",
+    "size_bytes": 1545
+  },
+  {
+    "path": "assets/assets/ace/snippets/ion.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/jack.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/jade.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/java.js",
+    "size_bytes": 4527
+  },
+  {
+    "path": "assets/assets/ace/snippets/javascript.js",
+    "size_bytes": 4219
+  },
+  {
+    "path": "assets/assets/ace/snippets/javascript_ls.js",
+    "size_bytes": 3084
+  },
+  {
+    "path": "assets/assets/ace/snippets/jexl.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/json.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/json5.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/jsoniq.js",
+    "size_bytes": 2197
+  },
+  {
+    "path": "assets/assets/ace/snippets/jsp.js",
+    "size_bytes": 3105
+  },
+  {
+    "path": "assets/assets/ace/snippets/jssm.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/jsx.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/jsx_ls.js",
+    "size_bytes": 2232
+  },
+  {
+    "path": "assets/assets/ace/snippets/julia.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/kotlin.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/latex.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/latte.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/less.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/less_ls.js",
+    "size_bytes": 2847
+  },
+  {
+    "path": "assets/assets/ace/snippets/lisp.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/livescript.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/logiql.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/logtalk.js",
+    "size_bytes": 335
+  },
+  {
+    "path": "assets/assets/ace/snippets/lua.js",
+    "size_bytes": 835
+  },
+  {
+    "path": "assets/assets/ace/snippets/luapage.js",
+    "size_bytes": 335
+  },
+  {
+    "path": "assets/assets/ace/snippets/lucene.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/makefile.js",
+    "size_bytes": 530
+  },
+  {
+    "path": "assets/assets/ace/snippets/markdown.js",
+    "size_bytes": 2305
+  },
+  {
+    "path": "assets/assets/ace/snippets/mask.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/matlab.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/maze.js",
+    "size_bytes": 598
+  },
+  {
+    "path": "assets/assets/ace/snippets/mediawiki.js",
+    "size_bytes": 337
+  },
+  {
+    "path": "assets/assets/ace/snippets/mel.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/mips.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/mixal.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/mushcode.js",
+    "size_bytes": 336
+  },
+  {
+    "path": "assets/assets/ace/snippets/mysql.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/nginx.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/nim.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/nix.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/nsis.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/nunjucks.js",
+    "size_bytes": 336
+  },
+  {
+    "path": "assets/assets/ace/snippets/objectivec.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/ocaml.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/partiql.js",
+    "size_bytes": 335
+  },
+  {
+    "path": "assets/assets/ace/snippets/pascal.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/perl.js",
+    "size_bytes": 5841
+  },
+  {
+    "path": "assets/assets/ace/snippets/pgsql.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/php.js",
+    "size_bytes": 7280
+  },
+  {
+    "path": "assets/assets/ace/snippets/php_laravel_blade.js",
+    "size_bytes": 345
+  },
+  {
+    "path": "assets/assets/ace/snippets/pig.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/plain_text.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/plsql.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/powershell.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/praat.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/prolog.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/properties.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/protobuf.js",
+    "size_bytes": 336
+  },
+  {
+    "path": "assets/assets/ace/snippets/puppet.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/python.js",
+    "size_bytes": 3215
+  },
+  {
+    "path": "assets/assets/ace/snippets/python_ls.js",
+    "size_bytes": 3224
+  },
+  {
+    "path": "assets/assets/ace/snippets/r.js",
+    "size_bytes": 2955
+  },
+  {
+    "path": "assets/assets/ace/snippets/raku.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/razor.js",
+    "size_bytes": 493
+  },
+  {
+    "path": "assets/assets/ace/snippets/rdoc.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/red.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/redshift.js",
+    "size_bytes": 336
+  },
+  {
+    "path": "assets/assets/ace/snippets/rhtml.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/rst.js",
+    "size_bytes": 769
+  },
+  {
+    "path": "assets/assets/ace/snippets/ruby.js",
+    "size_bytes": 21607
+  },
+  {
+    "path": "assets/assets/ace/snippets/rust.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/sac.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/sass.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/scad.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/scala.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/scheme.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/scrypt.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/scss.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/scss_ls.js",
+    "size_bytes": 2847
+  },
+  {
+    "path": "assets/assets/ace/snippets/sh.js",
+    "size_bytes": 2379
+  },
+  {
+    "path": "assets/assets/ace/snippets/sjs.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/slim.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/smarty.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/smithy.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/snippets.js",
+    "size_bytes": 629
+  },
+  {
+    "path": "assets/assets/ace/snippets/soy_template.js",
+    "size_bytes": 340
+  },
+  {
+    "path": "assets/assets/ace/snippets/space.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/sparql.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/sql.js",
+    "size_bytes": 1269
+  },
+  {
+    "path": "assets/assets/ace/snippets/sqlserver.js",
+    "size_bytes": 2472
+  },
+  {
+    "path": "assets/assets/ace/snippets/stylus.js",
+    "size_bytes": 2844
+  },
+  {
+    "path": "assets/assets/ace/snippets/svg.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/swift.js",
+    "size_bytes": 333
+  },
+  {
+    "path": "assets/assets/ace/snippets/tcl.js",
+    "size_bytes": 2017
+  },
+  {
+    "path": "assets/assets/ace/snippets/terraform.js",
+    "size_bytes": 337
+  },
+  {
+    "path": "assets/assets/ace/snippets/tex.js",
+    "size_bytes": 3963
+  },
+  {
+    "path": "assets/assets/ace/snippets/text.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/textile.js",
+    "size_bytes": 871
+  },
+  {
+    "path": "assets/assets/ace/snippets/toml.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/tsx.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/tsx_ls.js",
+    "size_bytes": 2232
+  },
+  {
+    "path": "assets/assets/ace/snippets/turtle.js",
+    "size_bytes": 334
+  },
+  {
+    "path": "assets/assets/ace/snippets/twig.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/typescript.js",
+    "size_bytes": 338
+  },
+  {
+    "path": "assets/assets/ace/snippets/typescript_ls.js",
+    "size_bytes": 2253
+  },
+  {
+    "path": "assets/assets/ace/snippets/vala.js",
+    "size_bytes": 3455
+  },
+  {
+    "path": "assets/assets/ace/snippets/vbscript.js",
+    "size_bytes": 336
+  },
+  {
+    "path": "assets/assets/ace/snippets/velocity.js",
+    "size_bytes": 983
+  },
+  {
+    "path": "assets/assets/ace/snippets/verilog.js",
+    "size_bytes": 335
+  },
+  {
+    "path": "assets/assets/ace/snippets/vhdl.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/visualforce.js",
+    "size_bytes": 339
+  },
+  {
+    "path": "assets/assets/ace/snippets/wollok.js",
+    "size_bytes": 1593
+  },
+  {
+    "path": "assets/assets/ace/snippets/xml.js",
+    "size_bytes": 331
+  },
+  {
+    "path": "assets/assets/ace/snippets/xquery.js",
+    "size_bytes": 2197
+  },
+  {
+    "path": "assets/assets/ace/snippets/yaml.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/snippets/zeek.js",
+    "size_bytes": 332
+  },
+  {
+    "path": "assets/assets/ace/worker-base.js",
+    "size_bytes": 21106
+  },
+  {
+    "path": "assets/assets/ace/worker-coffee.js",
+    "size_bytes": 322050
+  },
+  {
+    "path": "assets/assets/ace/worker-css.js",
+    "size_bytes": 149663
+  },
+  {
+    "path": "assets/assets/ace/worker-html.js",
+    "size_bytes": 207418
+  },
+  {
+    "path": "assets/assets/ace/worker-javascript.js",
+    "size_bytes": 154199
+  },
+  {
+    "path": "assets/assets/ace/worker-json.js",
+    "size_bytes": 22963
+  },
+  {
+    "path": "assets/assets/ace/worker-lua.js",
+    "size_bytes": 46847
+  },
+  {
+    "path": "assets/assets/ace/worker-php.js",
+    "size_bytes": 77351
+  },
+  {
+    "path": "assets/assets/ace/worker-xml.js",
+    "size_bytes": 45466
+  },
+  {
+    "path": "assets/assets/ace/worker-yaml.js",
+    "size_bytes": 75827
+  },
+  {
+    "path": "assets/assets/bundle/ace.bundle.js",
+    "size_bytes": 729480
+  },
+  {
+    "path": "assets/assets/bundle/app.bundle.js",
+    "size_bytes": 1710151
+  },
+  {
+    "path": "assets/assets/bundle/app.css",
+    "size_bytes": 159138
+  },
+  {
+    "path": "assets/assets/bundle/editor_tools.bundle.js",
+    "size_bytes": 216093
+  },
+  {
+    "path": "assets/assets/bundle/git.bundle.js",
+    "size_bytes": 323431
+  },
+  {
+    "path": "assets/assets/bundle/spck-ui-icons.woff",
+    "size_bytes": 45812
+  },
+  {
+    "path": "assets/assets/bundle/spck-ui-icons.woff2",
+    "size_bytes": 36296
+  },
+  {
+    "path": "assets/assets/bundle/vendor.bundle.css",
+    "size_bytes": 139008
+  },
+  {
+    "path": "assets/assets/bundle/vendor.bundle.js",
+    "size_bytes": 525745
+  },
+  {
+    "path": "assets/assets/bundle/xterm.bundle.js",
+    "size_bytes": 316003
+  },
+  {
+    "path": "assets/assets/favicon.ico",
+    "size_bytes": 4286
+  },
+  {
+    "path": "assets/assets/fonts/CourierNew-Regular.woff2",
+    "size_bytes": 141268
+  },
+  {
+    "path": "assets/assets/fonts/Inter-VariableFont.woff2",
+    "size_bytes": 349424
+  },
+  {
+    "path": "assets/assets/fonts/Inter.var.woff2",
+    "size_bytes": 297121
+  },
+  {
+    "path": "assets/assets/fonts/NotoMono-Regular.woff",
+    "size_bytes": 207536
+  },
+  {
+    "path": "assets/assets/fonts/Nunito-VariableFont.woff2",
+    "size_bytes": 100444
+  },
+  {
+    "path": "assets/assets/fonts/devicon.woff",
+    "size_bytes": 211540
+  },
+  {
+    "path": "assets/assets/fonts/font-mfizz.woff",
+    "size_bytes": 40904
+  },
+  {
+    "path": "assets/assets/fonts/themify.woff",
+    "size_bytes": 56108
+  },
+  {
+    "path": "assets/assets/img/app/caret-cursor.svg",
+    "size_bytes": 340
+  },
+  {
+    "path": "assets/assets/img/app/indent-guide-dark.png",
+    "size_bytes": 69
+  },
+  {
+    "path": "assets/assets/img/app/indent-guide.png",
+    "size_bytes": 69
+  },
+  {
+    "path": "assets/assets/img/app/left-select-cursor.svg",
+    "size_bytes": 269
+  },
+  {
+    "path": "assets/assets/img/app/right-select-cursor.svg",
+    "size_bytes": 302
+  },
+  {
+    "path": "assets/assets/img/app/round-error.svg",
+    "size_bytes": 403
+  },
+  {
+    "path": "assets/assets/img/app/round-info.svg",
+    "size_bytes": 290
+  },
+  {
+    "path": "assets/assets/img/app/round-warning.svg",
+    "size_bytes": 758
+  },
+  {
+    "path": "assets/assets/img/logo-mark-lite.svg",
+    "size_bytes": 4074
+  },
+  {
+    "path": "assets/assets/img/logo-mark-node.svg",
+    "size_bytes": 4991
+  },
+  {
+    "path": "assets/assets/img/logo-mark-site-dark.svg",
+    "size_bytes": 2266
+  },
+  {
+    "path": "assets/assets/img/logo-mark-site.svg",
+    "size_bytes": 2266
+  },
+  {
+    "path": "assets/assets/img/logo-mark.svg",
+    "size_bytes": 5032
+  },
+  {
+    "path": "assets/assets/img/not-found.svg",
+    "size_bytes": 58259
+  },
+  {
+    "path": "assets/assets/img/pw/pw-cs.png",
+    "size_bytes": 5176
+  },
+  {
+    "path": "assets/assets/img/pw/pw-pk.png",
+    "size_bytes": 3256
+  },
+  {
+    "path": "assets/assets/templates/tpl-html.json",
+    "size_bytes": 689
+  },
+  {
+    "path": "assets/assets/templates/tpl-snake.json",
+    "size_bytes": 8287
+  },
+  {
+    "path": "assets/assets/workers/@vscode/l10n.js",
+    "size_bytes": 1380
+  },
+  {
+    "path": "assets/assets/workers/common/entry.js",
+    "size_bytes": 74
+  },
+  {
+    "path": "assets/assets/workers/common/languageServiceTypes.js",
+    "size_bytes": 27768
+  },
+  {
+    "path": "assets/assets/workers/common/nls.js",
+    "size_bytes": 104
+  },
+  {
+    "path": "assets/assets/workers/common/require.js",
+    "size_bytes": 17792
+  },
+  {
+    "path": "assets/assets/workers/common/uri.js",
+    "size_bytes": 6351
+  },
+  {
+    "path": "assets/assets/workers/css/beautify/beautify-css.js",
+    "size_bytes": 21187
+  },
+  {
+    "path": "assets/assets/workers/css/cssLanguageService.js",
+    "size_bytes": 3823
+  },
+  {
+    "path": "assets/assets/workers/css/cssLanguageTypes.js",
+    "size_bytes": 4932
+  },
+  {
+    "path": "assets/assets/workers/css/data/webCustomData.js",
+    "size_bytes": 591379
+  },
+  {
+    "path": "assets/assets/workers/css/languageFacts/builtinData.js",
+    "size_bytes": 11255
+  },
+  {
+    "path": "assets/assets/workers/css/languageFacts/colors.js",
+    "size_bytes": 15779
+  },
+  {
+    "path": "assets/assets/workers/css/languageFacts/dataManager.js",
+    "size_bytes": 2276
+  },
+  {
+    "path": "assets/assets/workers/css/languageFacts/dataProvider.js",
+    "size_bytes": 1200
+  },
+  {
+    "path": "assets/assets/workers/css/languageFacts/entry.js",
+    "size_bytes": 2212
+  },
+  {
+    "path": "assets/assets/workers/css/languageFacts/facts.js",
+    "size_bytes": 892
+  },
+  {
+    "path": "assets/assets/workers/css/parser/cssErrors.js",
+    "size_bytes": 2951
+  },
+  {
+    "path": "assets/assets/workers/css/parser/cssNodes.js",
+    "size_bytes": 21954
+  },
+  {
+    "path": "assets/assets/workers/css/parser/cssParser.js",
+    "size_bytes": 35972
+  },
+  {
+    "path": "assets/assets/workers/css/parser/cssScanner.js",
+    "size_bytes": 9999
+  },
+  {
+    "path": "assets/assets/workers/css/parser/cssSymbolScope.js",
+    "size_bytes": 5675
+  },
+  {
+    "path": "assets/assets/workers/css/parser/lessParser.js",
+    "size_bytes": 15342
+  },
+  {
+    "path": "assets/assets/workers/css/parser/lessScanner.js",
+    "size_bytes": 1141
+  },
+  {
+    "path": "assets/assets/workers/css/parser/scssErrors.js",
+    "size_bytes": 661
+  },
+  {
+    "path": "assets/assets/workers/css/parser/scssParser.js",
+    "size_bytes": 20039
+  },
+  {
+    "path": "assets/assets/workers/css/parser/scssScanner.js",
+    "size_bytes": 1960
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssCodeActions.js",
+    "size_bytes": 1877
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssCompletion.js",
+    "size_bytes": 22755
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssFolding.js",
+    "size_bytes": 2285
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssFormatter.js",
+    "size_bytes": 2262
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssHover.js",
+    "size_bytes": 2682
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssNavigation.js",
+    "size_bytes": 8833
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssSelectionRange.js",
+    "size_bytes": 944
+  },
+  {
+    "path": "assets/assets/workers/css/services/cssValidation.js",
+    "size_bytes": 1189
+  },
+  {
+    "path": "assets/assets/workers/css/services/lessCompletion.js",
+    "size_bytes": 7876
+  },
+  {
+    "path": "assets/assets/workers/css/services/lint.js",
+    "size_bytes": 9378
+  },
+  {
+    "path": "assets/assets/workers/css/services/lintRules.js",
+    "size_bytes": 3258
+  },
+  {
+    "path": "assets/assets/workers/css/services/lintUtil.js",
+    "size_bytes": 2426
+  },
+  {
+    "path": "assets/assets/workers/css/services/pathCompletion.js",
+    "size_bytes": 2635
+  },
+  {
+    "path": "assets/assets/workers/css/services/scssCompletion.js",
+    "size_bytes": 14961
+  },
+  {
+    "path": "assets/assets/workers/css/services/scssNavigation.js",
+    "size_bytes": 2604
+  },
+  {
+    "path": "assets/assets/workers/css/services/selectorPrinting.js",
+    "size_bytes": 8147
+  },
+  {
+    "path": "assets/assets/workers/css/utils/arrays.js",
+    "size_bytes": 563
+  },
+  {
+    "path": "assets/assets/workers/css/utils/objects.js",
+    "size_bytes": 388
+  },
+  {
+    "path": "assets/assets/workers/css/utils/resources.js",
+    "size_bytes": 485
+  },
+  {
+    "path": "assets/assets/workers/css/utils/strings.js",
+    "size_bytes": 1267
+  },
+  {
+    "path": "assets/assets/workers/html/beautify/beautify-css.js",
+    "size_bytes": 21187
+  },
+  {
+    "path": "assets/assets/workers/html/beautify/beautify-html.js",
+    "size_bytes": 46009
+  },
+  {
+    "path": "assets/assets/workers/html/beautify/beautify.js",
+    "size_bytes": 324
+  },
+  {
+    "path": "assets/assets/workers/html/htmlLanguageService.js",
+    "size_bytes": 3020
+  },
+  {
+    "path": "assets/assets/workers/html/htmlLanguageTypes.js",
+    "size_bytes": 5823
+  },
+  {
+    "path": "assets/assets/workers/html/languageFacts/data/webCustomData.js",
+    "size_bytes": 264372
+  },
+  {
+    "path": "assets/assets/workers/html/languageFacts/dataManager.js",
+    "size_bytes": 1553
+  },
+  {
+    "path": "assets/assets/workers/html/languageFacts/dataProvider.js",
+    "size_bytes": 1696
+  },
+  {
+    "path": "assets/assets/workers/html/parser/htmlEntities.js",
+    "size_bytes": 36555
+  },
+  {
+    "path": "assets/assets/workers/html/parser/htmlParser.js",
+    "size_bytes": 2788
+  },
+  {
+    "path": "assets/assets/workers/html/parser/htmlScanner.js",
+    "size_bytes": 7172
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlCompletion.js",
+    "size_bytes": 10498
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlFolding.js",
+    "size_bytes": 2475
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlFormatter.js",
+    "size_bytes": 2636
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlHighlighting.js",
+    "size_bytes": 1117
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlHover.js",
+    "size_bytes": 4250
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlLinkedEditing.js",
+    "size_bytes": 793
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlLinks.js",
+    "size_bytes": 2525
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlMatchingTagPosition.js",
+    "size_bytes": 727
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlRename.js",
+    "size_bytes": 908
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlSelectionRange.js",
+    "size_bytes": 2816
+  },
+  {
+    "path": "assets/assets/workers/html/services/htmlSymbolsProvider.js",
+    "size_bytes": 1159
+  },
+  {
+    "path": "assets/assets/workers/html/services/pathCompletion.js",
+    "size_bytes": 2049
+  },
+  {
+    "path": "assets/assets/workers/html/utils/arrays.js",
+    "size_bytes": 566
+  },
+  {
+    "path": "assets/assets/workers/html/utils/markup.js",
+    "size_bytes": 429
+  },
+  {
+    "path": "assets/assets/workers/html/utils/object.js",
+    "size_bytes": 329
+  },
+  {
+    "path": "assets/assets/workers/html/utils/paths.js",
+    "size_bytes": 865
+  },
+  {
+    "path": "assets/assets/workers/html/utils/resources.js",
+    "size_bytes": 1310
+  },
+  {
+    "path": "assets/assets/workers/html/utils/strings.js",
+    "size_bytes": 956
+  },
+  {
+    "path": "assets/assets/workers/language.worker.js",
+    "size_bytes": 1060374
+  },
+  {
+    "path": "assets/assets/workers/pyright.worker.js",
+    "size_bytes": 1943666
+  },
+  {
+    "path": "assets/assets/workers/ts/typescriptServices.js",
+    "size_bytes": 3108706
+  },
+  {
+    "path": "assets/assets/workers/typeshed.json",
+    "size_bytes": 2955303
+  },
+  {
+    "path": "assets/assets/workers/vscode-languageserver-textdocument.js",
+    "size_bytes": 4488
+  },
+  {
+    "path": "assets/assets/workers/worker_deflate.js",
+    "size_bytes": 18282
+  },
+  {
+    "path": "assets/assets/workers/worker_inflate.js",
+    "size_bytes": 23713
+  },
+  {
+    "path": "assets/assets/workers/zip/codec.js",
+    "size_bytes": 678
+  },
+  {
+    "path": "assets/assets/workers/zip/wasm_flate.js",
+    "size_bytes": 2543
+  },
+  {
+    "path": "assets/assets/workers/zip/z-worker.js",
+    "size_bytes": 1851
+  },
+  {
+    "path": "assets/assets/xterm/xterm.css",
+    "size_bytes": 5559
+  },
+  {
+    "path": "assets/dexopt/baseline.prof",
+    "size_bytes": 13940
+  },
+  {
+    "path": "assets/dexopt/baseline.profm",
+    "size_bytes": 2035
+  },
+  {
+    "path": "assets/eruda/eruda-polyfill.js",
+    "size_bytes": 41590
+  },
+  {
+    "path": "assets/eruda/eruda.js",
+    "size_bytes": 499928
+  },
+  {
+    "path": "assets/index.html",
+    "size_bytes": 4364
+  },
+  {
+    "path": "assets/service.worker.js",
+    "size_bytes": 50220
+  },
+  {
+    "path": "barcode-scanning-common.properties",
+    "size_bytes": 84
+  },
+  {
+    "path": "billing.properties",
+    "size_bytes": 50
+  },
+  {
+    "path": "classes.dex",
+    "size_bytes": 9789256
+  },
+  {
+    "path": "classes2.dex",
+    "size_bytes": 827596
+  },
+  {
+    "path": "common.properties",
+    "size_bytes": 52
+  },
+  {
+    "path": "core-common.properties",
+    "size_bytes": 58
+  },
+  {
+    "path": "firebase-annotations.properties",
+    "size_bytes": 78
+  },
+  {
+    "path": "firebase-auth-interop.properties",
+    "size_bytes": 80
+  },
+  {
+    "path": "firebase-auth.properties",
+    "size_bytes": 64
+  },
+  {
+    "path": "firebase-encoders-json.properties",
+    "size_bytes": 82
+  },
+  {
+    "path": "firebase-encoders-proto.properties",
+    "size_bytes": 84
+  },
+  {
+    "path": "firebase-encoders.properties",
+    "size_bytes": 72
+  },
+  {
+    "path": "googleid.properties",
+    "size_bytes": 52
+  },
+  {
+    "path": "image.properties",
+    "size_bytes": 58
+  },
+  {
+    "path": "integrity.properties",
+    "size_bytes": 54
+  },
+  {
+    "path": "kotlin/annotation/annotation.kotlin_builtins",
+    "size_bytes": 865
+  },
+  {
+    "path": "kotlin/collections/collections.kotlin_builtins",
+    "size_bytes": 3635
+  },
+  {
+    "path": "kotlin/concurrent/atomics/atomics.kotlin_builtins",
+    "size_bytes": 2471
+  },
+  {
+    "path": "kotlin/coroutines/coroutines.kotlin_builtins",
+    "size_bytes": 137
+  },
+  {
+    "path": "kotlin/internal/internal.kotlin_builtins",
+    "size_bytes": 583
+  },
+  {
+    "path": "kotlin/kotlin.kotlin_builtins",
+    "size_bytes": 18653
+  },
+  {
+    "path": "kotlin/ranges/ranges.kotlin_builtins",
+    "size_bytes": 3349
+  },
+  {
+    "path": "kotlin/reflect/reflect.kotlin_builtins",
+    "size_bytes": 2370
+  },
+  {
+    "path": "okhttp3/internal/publicsuffix/NOTICE",
+    "size_bytes": 218
+  },
+  {
+    "path": "okhttp3/internal/publicsuffix/publicsuffixes.gz",
+    "size_bytes": 41394
+  },
+  {
+    "path": "org/commonmark/internal/util/entities.properties",
+    "size_bytes": 24470
+  },
+  {
+    "path": "play-services-ads-identifier.properties",
+    "size_bytes": 94
+  },
+  {
+    "path": "play-services-auth-api-phone.properties",
+    "size_bytes": 94
+  },
+  {
+    "path": "play-services-auth-base.properties",
+    "size_bytes": 86
+  },
+  {
+    "path": "play-services-auth-blockstore.properties",
+    "size_bytes": 96
+  },
+  {
+    "path": "play-services-auth.properties",
+    "size_bytes": 74
+  },
+  {
+    "path": "play-services-base.properties",
+    "size_bytes": 74
+  },
+  {
+    "path": "play-services-basement.properties",
+    "size_bytes": 82
+  },
+  {
+    "path": "play-services-fido.properties",
+    "size_bytes": 74
+  },
+  {
+    "path": "play-services-identity-credentials.properties",
+    "size_bytes": 122
+  },
+  {
+    "path": "play-services-location.properties",
+    "size_bytes": 82
+  },
+  {
+    "path": "play-services-mlkit-barcode-scanning.properties",
+    "size_bytes": 110
+  },
+  {
+    "path": "play-services-places-placereport.properties",
+    "size_bytes": 102
+  },
+  {
+    "path": "play-services-tasks.properties",
+    "size_bytes": 76
+  },
+  {
+    "path": "recaptcha.properties",
+    "size_bytes": 56
+  },
+  {
+    "path": "res/anim/abc_grow_fade_in_from_bottom.xml",
+    "size_bytes": 852
+  },
+  {
+    "path": "res/anim/abc_popup_enter.xml",
+    "size_bytes": 508
+  },
+  {
+    "path": "res/anim/abc_popup_exit.xml",
+    "size_bytes": 508
+  },
+  {
+    "path": "res/anim/abc_shrink_fade_out_from_bottom.xml",
+    "size_bytes": 852
+  },
+  {
+    "path": "res/anim/abc_tooltip_enter.xml",
+    "size_bytes": 388
+  },
+  {
+    "path": "res/anim/abc_tooltip_exit.xml",
+    "size_bytes": 388
+  },
+  {
+    "path": "res/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+    "size_bytes": 2124
+  },
+  {
+    "path": "res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+    "size_bytes": 2780
+  },
+  {
+    "path": "res/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+    "size_bytes": 1196
+  },
+  {
+    "path": "res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+    "size_bytes": 2360
+  },
+  {
+    "path": "res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+    "size_bytes": 2520
+  },
+  {
+    "path": "res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+    "size_bytes": 1196
+  },
+  {
+    "path": "res/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+    "size_bytes": 1656
+  },
+  {
+    "path": "res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+    "size_bytes": 1656
+  },
+  {
+    "path": "res/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+    "size_bytes": 1028
+  },
+  {
+    "path": "res/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+    "size_bytes": 1656
+  },
+  {
+    "path": "res/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+    "size_bytes": 1656
+  },
+  {
+    "path": "res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+    "size_bytes": 1028
+  },
+  {
+    "path": "res/anim-v21/fragment_fast_out_extra_slow_in.xml",
+    "size_bytes": 364
+  },
+  {
+    "path": "res/animator/fragment_close_enter.xml",
+    "size_bytes": 1128
+  },
+  {
+    "path": "res/animator/fragment_close_exit.xml",
+    "size_bytes": 1128
+  },
+  {
+    "path": "res/animator/fragment_fade_enter.xml",
+    "size_bytes": 452
+  },
+  {
+    "path": "res/animator/fragment_fade_exit.xml",
+    "size_bytes": 452
+  },
+  {
+    "path": "res/animator/fragment_open_enter.xml",
+    "size_bytes": 1128
+  },
+  {
+    "path": "res/animator/fragment_open_exit.xml",
+    "size_bytes": 1128
+  },
+  {
+    "path": "res/color/abc_hint_foreground_material_dark.xml",
+    "size_bytes": 564
+  },
+  {
+    "path": "res/color/abc_hint_foreground_material_light.xml",
+    "size_bytes": 564
+  },
+  {
+    "path": "res/color/abc_primary_text_material_dark.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/color/abc_primary_text_material_light.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/color/abc_search_url_text.xml",
+    "size_bytes": 588
+  },
+  {
+    "path": "res/color/common_google_signin_btn_text_dark.xml",
+    "size_bytes": 712
+  },
+  {
+    "path": "res/color/common_google_signin_btn_text_light.xml",
+    "size_bytes": 712
+  },
+  {
+    "path": "res/color/common_google_signin_btn_tint.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/color/switch_thumb_material_dark.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/color/switch_thumb_material_light.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/color/vector_tint_color.xml",
+    "size_bytes": 340
+  },
+  {
+    "path": "res/color/vector_tint_theme_color.xml",
+    "size_bytes": 340
+  },
+  {
+    "path": "res/color-v23/abc_color_highlight_material.xml",
+    "size_bytes": 544
+  },
+  {
+    "path": "res/color-v23/abc_tint_btn_checkable.xml",
+    "size_bytes": 624
+  },
+  {
+    "path": "res/color-v23/abc_tint_default.xml",
+    "size_bytes": 1120
+  },
+  {
+    "path": "res/color-v23/abc_tint_edittext.xml",
+    "size_bytes": 668
+  },
+  {
+    "path": "res/color-v23/abc_tint_seek_thumb.xml",
+    "size_bytes": 500
+  },
+  {
+    "path": "res/color-v23/abc_tint_spinner.xml",
+    "size_bytes": 668
+  },
+  {
+    "path": "res/color-v23/abc_tint_switch_track.xml",
+    "size_bytes": 664
+  },
+  {
+    "path": "res/drawable/abc_btn_borderless_material.xml",
+    "size_bytes": 588
+  },
+  {
+    "path": "res/drawable/abc_btn_check_material.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/drawable/abc_btn_check_material_anim.xml",
+    "size_bytes": 816
+  },
+  {
+    "path": "res/drawable/abc_btn_default_mtrl_shape.xml",
+    "size_bytes": 932
+  },
+  {
+    "path": "res/drawable/abc_btn_radio_material.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/drawable/abc_btn_radio_material_anim.xml",
+    "size_bytes": 816
+  },
+  {
+    "path": "res/drawable/abc_cab_background_internal_bg.xml",
+    "size_bytes": 372
+  },
+  {
+    "path": "res/drawable/abc_cab_background_top_material.xml",
+    "size_bytes": 336
+  },
+  {
+    "path": "res/drawable/abc_ic_ab_back_material.xml",
+    "size_bytes": 692
+  },
+  {
+    "path": "res/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+    "size_bytes": 1000
+  },
+  {
+    "path": "res/drawable/abc_ic_clear_material.xml",
+    "size_bytes": 684
+  },
+  {
+    "path": "res/drawable/abc_ic_go_search_api_material.xml",
+    "size_bytes": 640
+  },
+  {
+    "path": "res/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+    "size_bytes": 756
+  },
+  {
+    "path": "res/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+    "size_bytes": 1096
+  },
+  {
+    "path": "res/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+    "size_bytes": 796
+  },
+  {
+    "path": "res/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+    "size_bytes": 920
+  },
+  {
+    "path": "res/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+    "size_bytes": 980
+  },
+  {
+    "path": "res/drawable/abc_ic_search_api_material.xml",
+    "size_bytes": 812
+  },
+  {
+    "path": "res/drawable/abc_ic_voice_search_api_material.xml",
+    "size_bytes": 828
+  },
+  {
+    "path": "res/drawable/abc_item_background_holo_dark.xml",
+    "size_bytes": 1012
+  },
+  {
+    "path": "res/drawable/abc_item_background_holo_light.xml",
+    "size_bytes": 1012
+  },
+  {
+    "path": "res/drawable/abc_list_selector_background_transition_holo_dark.xml",
+    "size_bytes": 424
+  },
+  {
+    "path": "res/drawable/abc_list_selector_background_transition_holo_light.xml",
+    "size_bytes": 424
+  },
+  {
+    "path": "res/drawable/abc_list_selector_holo_dark.xml",
+    "size_bytes": 1064
+  },
+  {
+    "path": "res/drawable/abc_list_selector_holo_light.xml",
+    "size_bytes": 1064
+  },
+  {
+    "path": "res/drawable/abc_ratingbar_indicator_material.xml",
+    "size_bytes": 124
+  },
+  {
+    "path": "res/drawable/abc_ratingbar_material.xml",
+    "size_bytes": 124
+  },
+  {
+    "path": "res/drawable/abc_ratingbar_small_material.xml",
+    "size_bytes": 124
+  },
+  {
+    "path": "res/drawable/abc_seekbar_thumb_material.xml",
+    "size_bytes": 1100
+  },
+  {
+    "path": "res/drawable/abc_seekbar_tick_mark_material.xml",
+    "size_bytes": 516
+  },
+  {
+    "path": "res/drawable/abc_seekbar_track_material.xml",
+    "size_bytes": 1408
+  },
+  {
+    "path": "res/drawable/abc_spinner_textfield_background_material.xml",
+    "size_bytes": 1160
+  },
+  {
+    "path": "res/drawable/abc_star_black_48dp.xml",
+    "size_bytes": 640
+  },
+  {
+    "path": "res/drawable/abc_star_half_black_48dp.xml",
+    "size_bytes": 600
+  },
+  {
+    "path": "res/drawable/abc_switch_thumb_material.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/drawable/abc_tab_indicator_material.xml",
+    "size_bytes": 468
+  },
+  {
+    "path": "res/drawable/abc_text_cursor_material.xml",
+    "size_bytes": 516
+  },
+  {
+    "path": "res/drawable/abc_textfield_search_material.xml",
+    "size_bytes": 756
+  },
+  {
+    "path": "res/drawable/abc_vector_test.xml",
+    "size_bytes": 612
+  },
+  {
+    "path": "res/drawable/add.xml",
+    "size_bytes": 588
+  },
+  {
+    "path": "res/drawable/adx_ic_other_sign_in.xml",
+    "size_bytes": 1228
+  },
+  {
+    "path": "res/drawable/adx_ic_passkey.xml",
+    "size_bytes": 1200
+  },
+  {
+    "path": "res/drawable/adx_ic_password.xml",
+    "size_bytes": 2092
+  },
+  {
+    "path": "res/drawable/android.xml",
+    "size_bytes": 1468
+  },
+  {
+    "path": "res/drawable/apple.xml",
+    "size_bytes": 1312
+  },
+  {
+    "path": "res/drawable/attach_money.xml",
+    "size_bytes": 984
+  },
+  {
+    "path": "res/drawable/attachment.xml",
+    "size_bytes": 840
+  },
+  {
+    "path": "res/drawable/bar_chart.xml",
+    "size_bytes": 612
+  },
+  {
+    "path": "res/drawable/bookmark.xml",
+    "size_bytes": 616
+  },
+  {
+    "path": "res/drawable/bookmark_no_fill.xml",
+    "size_bytes": 644
+  },
+  {
+    "path": "res/drawable/btn_checkbox_checked_mtrl.xml",
+    "size_bytes": 2688
+  },
+  {
+    "path": "res/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+    "size_bytes": 688
+  },
+  {
+    "path": "res/drawable/btn_checkbox_unchecked_mtrl.xml",
+    "size_bytes": 2660
+  },
+  {
+    "path": "res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+    "size_bytes": 688
+  },
+  {
+    "path": "res/drawable/btn_radio_off_mtrl.xml",
+    "size_bytes": 1728
+  },
+  {
+    "path": "res/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+    "size_bytes": 680
+  },
+  {
+    "path": "res/drawable/btn_radio_on_mtrl.xml",
+    "size_bytes": 1656
+  },
+  {
+    "path": "res/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+    "size_bytes": 680
+  },
+  {
+    "path": "res/drawable/calendar_today.xml",
+    "size_bytes": 676
+  },
+  {
+    "path": "res/drawable/chat_bubble.xml",
+    "size_bytes": 628
+  },
+  {
+    "path": "res/drawable/check_circle.xml",
+    "size_bytes": 696
+  },
+  {
+    "path": "res/drawable/close.xml",
+    "size_bytes": 656
+  },
+  {
+    "path": "res/drawable/collapse.xml",
+    "size_bytes": 844
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_icon_dark.xml",
+    "size_bytes": 588
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_icon_dark_focused.xml",
+    "size_bytes": 892
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_icon_dark_normal.xml",
+    "size_bytes": 548
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_icon_disabled.xml",
+    "size_bytes": 1132
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_icon_light.xml",
+    "size_bytes": 588
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_icon_light_focused.xml",
+    "size_bytes": 892
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_icon_light_normal.xml",
+    "size_bytes": 548
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_text_dark.xml",
+    "size_bytes": 588
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_text_dark_focused.xml",
+    "size_bytes": 892
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_text_dark_normal.xml",
+    "size_bytes": 584
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_text_disabled.xml",
+    "size_bytes": 1152
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_text_light.xml",
+    "size_bytes": 588
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_text_light_focused.xml",
+    "size_bytes": 892
+  },
+  {
+    "path": "res/drawable/common_google_signin_btn_text_light_normal.xml",
+    "size_bytes": 584
+  },
+  {
+    "path": "res/drawable/compare.xml",
+    "size_bytes": 704
+  },
+  {
+    "path": "res/drawable/default_background.jpg",
+    "size_bytes": 106394
+  },
+  {
+    "path": "res/drawable/download.xml",
+    "size_bytes": 956
+  },
+  {
+    "path": "res/drawable/edit.xml",
+    "size_bytes": 720
+  },
+  {
+    "path": "res/drawable/email.xml",
+    "size_bytes": 680
+  },
+  {
+    "path": "res/drawable/error.xml",
+    "size_bytes": 680
+  },
+  {
+    "path": "res/drawable/experiments.xml",
+    "size_bytes": 1436
+  },
+  {
+    "path": "res/drawable/extension.xml",
+    "size_bytes": 908
+  },
+  {
+    "path": "res/drawable/file_copy.xml",
+    "size_bytes": 700
+  },
+  {
+    "path": "res/drawable/filter_list.xml",
+    "size_bytes": 600
+  },
+  {
+    "path": "res/drawable/folder.xml",
+    "size_bytes": 700
+  },
+  {
+    "path": "res/drawable/globe.xml",
+    "size_bytes": 1136
+  },
+  {
+    "path": "res/drawable/help.xml",
+    "size_bytes": 900
+  },
+  {
+    "path": "res/drawable/ic_console.xml",
+    "size_bytes": 1224
+  },
+  {
+    "path": "res/drawable/ic_console_close.xml",
+    "size_bytes": 964
+  },
+  {
+    "path": "res/drawable/ic_launcher_background.xml",
+    "size_bytes": 608
+  },
+  {
+    "path": "res/drawable/ic_launcher_foreground.xml",
+    "size_bytes": 4372
+  },
+  {
+    "path": "res/drawable/ic_refresh.xml",
+    "size_bytes": 1144
+  },
+  {
+    "path": "res/drawable/insert_drive_file.xml",
+    "size_bytes": 656
+  },
+  {
+    "path": "res/drawable/launch.xml",
+    "size_bytes": 696
+  },
+  {
+    "path": "res/drawable/layers.xml",
+    "size_bytes": 680
+  },
+  {
+    "path": "res/drawable/line_chart.xml",
+    "size_bytes": 640
+  },
+  {
+    "path": "res/drawable/lock.xml",
+    "size_bytes": 856
+  },
+  {
+    "path": "res/drawable/notification_action_background.xml",
+    "size_bytes": 1180
+  },
+  {
+    "path": "res/drawable/notification_bg.xml",
+    "size_bytes": 532
+  },
+  {
+    "path": "res/drawable/notification_bg_low.xml",
+    "size_bytes": 532
+  },
+  {
+    "path": "res/drawable/notification_icon_background.xml",
+    "size_bytes": 372
+  },
+  {
+    "path": "res/drawable/notification_tile_bg.xml",
+    "size_bytes": 304
+  },
+  {
+    "path": "res/drawable/notifications.xml",
+    "size_bytes": 752
+  },
+  {
+    "path": "res/drawable/person.xml",
+    "size_bytes": 704
+  },
+  {
+    "path": "res/drawable/phone.xml",
+    "size_bytes": 868
+  },
+  {
+    "path": "res/drawable/play_circle.xml",
+    "size_bytes": 668
+  },
+  {
+    "path": "res/drawable/remove_red_eye.xml",
+    "size_bytes": 844
+  },
+  {
+    "path": "res/drawable/search.xml",
+    "size_bytes": 844
+  },
+  {
+    "path": "res/drawable/share.xml",
+    "size_bytes": 1028
+  },
+  {
+    "path": "res/drawable/smartphone.xml",
+    "size_bytes": 812
+  },
+  {
+    "path": "res/drawable/stacked_bar.xml",
+    "size_bytes": 772
+  },
+  {
+    "path": "res/drawable/stars.xml",
+    "size_bytes": 760
+  },
+  {
+    "path": "res/drawable/subtract.xml",
+    "size_bytes": 580
+  },
+  {
+    "path": "res/drawable/test_level_drawable.xml",
+    "size_bytes": 448
+  },
+  {
+    "path": "res/drawable/tick.xml",
+    "size_bytes": 760
+  },
+  {
+    "path": "res/drawable/tooltip_frame_dark.xml",
+    "size_bytes": 484
+  },
+  {
+    "path": "res/drawable/tooltip_frame_light.xml",
+    "size_bytes": 484
+  },
+  {
+    "path": "res/drawable/transfer.xml",
+    "size_bytes": 1236
+  },
+  {
+    "path": "res/drawable/two_way_arrows.xml",
+    "size_bytes": 672
+  },
+  {
+    "path": "res/drawable/vpn_key.xml",
+    "size_bytes": 756
+  },
+  {
+    "path": "res/drawable/warning.xml",
+    "size_bytes": 604
+  },
+  {
+    "path": "res/drawable-anydpi-v23/fingerprint_dialog_fp_icon.xml",
+    "size_bytes": 3612
+  },
+  {
+    "path": "res/drawable-hdpi-v4/notification_oversize_large_icon_bg.png",
+    "size_bytes": 909
+  },
+  {
+    "path": "res/drawable-v21/abc_action_bar_item_background_material.xml",
+    "size_bytes": 264
+  },
+  {
+    "path": "res/drawable-v21/abc_btn_colored_material.xml",
+    "size_bytes": 1716
+  },
+  {
+    "path": "res/drawable-v21/abc_dialog_material_background.xml",
+    "size_bytes": 716
+  },
+  {
+    "path": "res/drawable-v21/abc_edit_text_material.xml",
+    "size_bytes": 1172
+  },
+  {
+    "path": "res/drawable-v21/abc_list_divider_material.xml",
+    "size_bytes": 516
+  },
+  {
+    "path": "res/drawable-v23/abc_control_background_material.xml",
+    "size_bytes": 304
+  },
+  {
+    "path": "res/drawable-watch-v20/abc_dialog_material_background.xml",
+    "size_bytes": 372
+  },
+  {
+    "path": "res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+    "size_bytes": 908
+  },
+  {
+    "path": "res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+    "size_bytes": 1040
+  },
+  {
+    "path": "res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+    "size_bytes": 872
+  },
+  {
+    "path": "res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml",
+    "size_bytes": 316
+  },
+  {
+    "path": "res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml",
+    "size_bytes": 328
+  },
+  {
+    "path": "res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml",
+    "size_bytes": 316
+  },
+  {
+    "path": "res/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml",
+    "size_bytes": 328
+  },
+  {
+    "path": "res/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml",
+    "size_bytes": 320
+  },
+  {
+    "path": "res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml",
+    "size_bytes": 320
+  },
+  {
+    "path": "res/interpolator/fast_out_slow_in.xml",
+    "size_bytes": 400
+  },
+  {
+    "path": "res/layout/abc_action_bar_title_item.xml",
+    "size_bytes": 872
+  },
+  {
+    "path": "res/layout/abc_action_menu_item_layout.xml",
+    "size_bytes": 768
+  },
+  {
+    "path": "res/layout/abc_action_menu_layout.xml",
+    "size_bytes": 576
+  },
+  {
+    "path": "res/layout/abc_action_mode_bar.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/layout/abc_action_mode_close_item_material.xml",
+    "size_bytes": 840
+  },
+  {
+    "path": "res/layout/abc_alert_dialog_button_bar_material.xml",
+    "size_bytes": 1584
+  },
+  {
+    "path": "res/layout/abc_alert_dialog_material.xml",
+    "size_bytes": 2648
+  },
+  {
+    "path": "res/layout/abc_alert_dialog_title_material.xml",
+    "size_bytes": 1560
+  },
+  {
+    "path": "res/layout/abc_cascading_menu_item_layout.xml",
+    "size_bytes": 1868
+  },
+  {
+    "path": "res/layout/abc_dialog_title_material.xml",
+    "size_bytes": 1116
+  },
+  {
+    "path": "res/layout/abc_expanded_menu_layout.xml",
+    "size_bytes": 388
+  },
+  {
+    "path": "res/layout/abc_list_menu_item_checkbox.xml",
+    "size_bytes": 528
+  },
+  {
+    "path": "res/layout/abc_list_menu_item_icon.xml",
+    "size_bytes": 780
+  },
+  {
+    "path": "res/layout/abc_list_menu_item_layout.xml",
+    "size_bytes": 1396
+  },
+  {
+    "path": "res/layout/abc_list_menu_item_radio.xml",
+    "size_bytes": 532
+  },
+  {
+    "path": "res/layout/abc_popup_menu_header_item_layout.xml",
+    "size_bytes": 848
+  },
+  {
+    "path": "res/layout/abc_popup_menu_item_layout.xml",
+    "size_bytes": 2072
+  },
+  {
+    "path": "res/layout/abc_screen_content_include.xml",
+    "size_bytes": 548
+  },
+  {
+    "path": "res/layout/abc_screen_simple.xml",
+    "size_bytes": 832
+  },
+  {
+    "path": "res/layout/abc_screen_simple_overlay_action_mode.xml",
+    "size_bytes": 792
+  },
+  {
+    "path": "res/layout/abc_screen_toolbar.xml",
+    "size_bytes": 1504
+  },
+  {
+    "path": "res/layout/abc_search_dropdown_item_icons_2line.xml",
+    "size_bytes": 1916
+  },
+  {
+    "path": "res/layout/abc_search_view.xml",
+    "size_bytes": 3472
+  },
+  {
+    "path": "res/layout/abc_select_dialog_material.xml",
+    "size_bytes": 1020
+  },
+  {
+    "path": "res/layout/abc_tooltip.xml",
+    "size_bytes": 1056
+  },
+  {
+    "path": "res/layout/browser_actions_context_menu_page.xml",
+    "size_bytes": 1660
+  },
+  {
+    "path": "res/layout/browser_actions_context_menu_row.xml",
+    "size_bytes": 1212
+  },
+  {
+    "path": "res/layout/custom_dialog.xml",
+    "size_bytes": 612
+  },
+  {
+    "path": "res/layout/editor.xml",
+    "size_bytes": 600
+  },
+  {
+    "path": "res/layout/fingerprint_dialog_layout.xml",
+    "size_bytes": 1912
+  },
+  {
+    "path": "res/layout/ime_base_split_test_activity.xml",
+    "size_bytes": 364
+  },
+  {
+    "path": "res/layout/ime_secondary_split_test_activity.xml",
+    "size_bytes": 876
+  },
+  {
+    "path": "res/layout/notification_action.xml",
+    "size_bytes": 1052
+  },
+  {
+    "path": "res/layout/notification_action_tombstone.xml",
+    "size_bytes": 1228
+  },
+  {
+    "path": "res/layout/notification_media_action.xml",
+    "size_bytes": 564
+  },
+  {
+    "path": "res/layout/notification_media_cancel_action.xml",
+    "size_bytes": 744
+  },
+  {
+    "path": "res/layout/notification_template_big_media.xml",
+    "size_bytes": 1696
+  },
+  {
+    "path": "res/layout/notification_template_big_media_custom.xml",
+    "size_bytes": 3044
+  },
+  {
+    "path": "res/layout/notification_template_big_media_narrow.xml",
+    "size_bytes": 1824
+  },
+  {
+    "path": "res/layout/notification_template_big_media_narrow_custom.xml",
+    "size_bytes": 3216
+  },
+  {
+    "path": "res/layout/notification_template_custom_big.xml",
+    "size_bytes": 2456
+  },
+  {
+    "path": "res/layout/notification_template_icon_group.xml",
+    "size_bytes": 988
+  },
+  {
+    "path": "res/layout/notification_template_lines_media.xml",
+    "size_bytes": 2872
+  },
+  {
+    "path": "res/layout/notification_template_media.xml",
+    "size_bytes": 1292
+  },
+  {
+    "path": "res/layout/notification_template_media_custom.xml",
+    "size_bytes": 2756
+  },
+  {
+    "path": "res/layout/notification_template_part_chronometer.xml",
+    "size_bytes": 440
+  },
+  {
+    "path": "res/layout/notification_template_part_time.xml",
+    "size_bytes": 440
+  },
+  {
+    "path": "res/layout/select_dialog_item_material.xml",
+    "size_bytes": 640
+  },
+  {
+    "path": "res/layout/select_dialog_multichoice_material.xml",
+    "size_bytes": 864
+  },
+  {
+    "path": "res/layout/select_dialog_singlechoice_material.xml",
+    "size_bytes": 864
+  },
+  {
+    "path": "res/layout/support_simple_spinner_dropdown_item.xml",
+    "size_bytes": 464
+  },
+  {
+    "path": "res/layout/webview.xml",
+    "size_bytes": 2108
+  },
+  {
+    "path": "res/layout/webview_no_console.xml",
+    "size_bytes": 352
+  },
+  {
+    "path": "res/layout-v26/abc_screen_toolbar.xml",
+    "size_bytes": 1560
+  },
+  {
+    "path": "res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+    "size_bytes": 1208
+  },
+  {
+    "path": "res/layout-watch-v20/abc_alert_dialog_title_material.xml",
+    "size_bytes": 1352
+  },
+  {
+    "path": "res/menu/main.xml",
+    "size_bytes": 1796
+  },
+  {
+    "path": "res/mipmap-anydpi-v26/ic_launcher.xml",
+    "size_bytes": 448
+  },
+  {
+    "path": "res/mipmap-hdpi-v4/ic_launcher.png",
+    "size_bytes": 3590
+  },
+  {
+    "path": "res/mipmap-mdpi-v4/ic_launcher.png",
+    "size_bytes": 2543
+  },
+  {
+    "path": "res/mipmap-xhdpi-v4/ic_launcher.png",
+    "size_bytes": 5451
+  },
+  {
+    "path": "res/mipmap-xxhdpi-v4/ic_launcher.png",
+    "size_bytes": 10766
+  },
+  {
+    "path": "res/mipmap-xxxhdpi-v4/ic_launcher.png",
+    "size_bytes": 24589
+  },
+  {
+    "path": "res/raw/firebase_common_keep.xml",
+    "size_bytes": 290
+  },
+  {
+    "path": "res/xml/file_provider_paths.xml",
+    "size_bytes": 388
+  },
+  {
+    "path": "res/xml/image_share_filepaths.xml",
+    "size_bytes": 308
+  },
+  {
+    "path": "res/xml/splits0.xml",
+    "size_bytes": 9712
+  },
+  {
+    "path": "resources.arsc",
+    "size_bytes": 147716
+  },
+  {
+    "path": "transport-api.properties",
+    "size_bytes": 62
+  },
+  {
+    "path": "transport-backend-cct.properties",
+    "size_bytes": 78
+  },
+  {
+    "path": "transport-runtime.properties",
+    "size_bytes": 70
+  },
+  {
+    "path": "vision-common.properties",
+    "size_bytes": 64
+  },
+  {
+    "path": "vision-interfaces.properties",
+    "size_bytes": 72
+  },
+  {
+    "path": "stamp-cert-sha256",
+    "size_bytes": 32
+  }
+]

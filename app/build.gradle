@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.reconstruction.spck'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.reconstruction.spck'
+        minSdk 23
+        targetSdk 34
+        versionCode 9
+        versionName '0.9.0-reconstruction-final'
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+        }
+        release {
+            // Enable R8 code shrinking to reduce APK size and prevent
+            // reflection-based enumeration of internal implementation classes.
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.15.0'
+}
