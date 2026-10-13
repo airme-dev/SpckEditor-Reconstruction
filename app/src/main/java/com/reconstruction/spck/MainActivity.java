@@ -307,7 +307,13 @@ public final class MainActivity extends Activity implements NativeFileBridge.Arc
                         try {
                             java.io.InputStream stream = getAssets().open(assetPath);
                             String mimeType = getAssetMimeType(assetPath);
-                            return new WebResourceResponse(mimeType, "UTF-8", stream);
+                            WebResourceResponse response = new WebResourceResponse(mimeType, "UTF-8", stream);
+                            // Allow the Worker polyfill's synchronous XHR to read worker scripts.
+                            java.util.Map<String, String> headers = new java.util.HashMap<>();
+                            headers.put("Access-Control-Allow-Origin", "*");
+                            headers.put("Cache-Control", "no-cache");
+                            response.setResponseHeaders(headers);
+                            return response;
                         } catch (java.io.IOException ignored) { }
                     }
                 }
@@ -319,6 +325,15 @@ public final class MainActivity extends Activity implements NativeFileBridge.Arc
                 super.onPageFinished(view, url);
                 if (isTrustedEditorUrl(url)) {
                     view.evaluateJavascript(PROJECT_ARCHIVE_TOOLS_SCRIPT, null);
+                    // Validate that the Android Worker polyfill was installed before the bundles ran.
+                    view.evaluateJavascript(
+                        "(function(){ " +
+                        "  var ok = typeof Worker !== 'undefined' && Worker.name !== 'Worker' || " +
+                        "           (typeof Worker !== 'undefined' && Worker.toString().indexOf('FakeWorkerGate') !== -1); " +
+                        "  console.log('[SpckPatch] Worker polyfill active: ' + ok + ' | Worker=' + (typeof Worker !== 'undefined' ? Worker.name : 'none')); " +
+                        "})()",
+                        null
+                    );
                 }
             }
 
