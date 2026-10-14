@@ -37,18 +37,15 @@ final class LoopbackPreviewServer implements AutoCloseable {
     LoopbackPreviewServer(File baseDirectory) throws IOException {
         this.baseDirectory = baseDirectory.getCanonicalFile();
         if (!this.baseDirectory.isDirectory()) throw new IOException("Preview path is not a directory");
-        // Use the JVM loopback address so the server works on both IPv4-only and
-        // dual-stack devices without hardcoding a specific loopback literal.
-        this.serverSocket = new ServerSocket(0, 32, InetAddress.getLoopbackAddress());
+        // Bind explicitly to IPv4 loopback (127.0.0.1) so URL matching and PreviewActivity routing are deterministic.
+        this.serverSocket = new ServerSocket(0, 32, InetAddress.getByName("127.0.0.1"));
         this.acceptThread = new Thread(this::acceptLoop, "spck-preview-accept");
         this.acceptThread.setDaemon(true);
         this.acceptThread.start();
     }
 
     String getUrl() {
-        // Derive the host from the actually-bound address to avoid mismatches.
-        String host = serverSocket.getInetAddress().getHostAddress();
-        return "http://" + host + ":" + serverSocket.getLocalPort() + "/";
+        return "http://127.0.0.1:" + serverSocket.getLocalPort() + "/";
     }
 
     private void acceptLoop() {
@@ -140,6 +137,20 @@ final class LoopbackPreviewServer implements AutoCloseable {
         File candidate = path.isEmpty() ? baseDirectory : new File(baseDirectory, path);
         String base = baseDirectory.getCanonicalPath();
         String resolved = candidate.getCanonicalPath();
+        if (candidate.exists() && (resolved.equals(base) || resolved.startsWith(base + File.separator))) {
+            return new File(resolved);
+        }
+        if (path.startsWith("documents/")) {
+            String stripped = path.substring("documents/".length());
+            if (stripped.startsWith(baseDirectory.getName() + "/")) {
+                stripped = stripped.substring(baseDirectory.getName().length() + 1);
+            }
+            File candidate2 = stripped.isEmpty() ? baseDirectory : new File(baseDirectory, stripped);
+            String resolved2 = candidate2.getCanonicalPath();
+            if (candidate2.exists() && (resolved2.equals(base) || resolved2.startsWith(base + File.separator))) {
+                return new File(resolved2);
+            }
+        }
         if (!resolved.equals(base) && !resolved.startsWith(base + File.separator)) return null;
         return new File(resolved);
     }

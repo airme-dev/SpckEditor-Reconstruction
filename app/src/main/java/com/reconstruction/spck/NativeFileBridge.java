@@ -596,6 +596,8 @@ public final class NativeFileBridge {
                 value = new String(bytes, Charset.forName("UTF-16LE"));
             } else if (!forceBase64 && ("utf16be".equals(enc) || "utf-16be".equals(enc))) {
                 value = new String(bytes, Charset.forName("UTF-16BE"));
+            } else if (!forceBase64 && ("latin1".equals(enc) || "ascii".equals(enc) || "iso-8859-1".equals(enc))) {
+                value = new String(bytes, StandardCharsets.ISO_8859_1);
             } else {
                 value = Base64.encodeToString(bytes, Base64.NO_WRAP);
             }
@@ -1163,12 +1165,12 @@ public final class NativeFileBridge {
 
     private byte[] decodeContents(String value, String encoding) throws Exception {
         String safe = value == null ? "" : value;
-        if ("base64".equals(encoding) || "binary".equals(encoding) || "utf".equals(encoding)) {
+        if ("base64".equals(encoding) || "binary".equals(encoding)) {
             return Base64.decode(safe, Base64.DEFAULT);
         }
         if ("utf16be".equals(encoding) || "utf-16be".equals(encoding)) return safe.getBytes(Charset.forName("UTF-16BE"));
         if ("utf16le".equals(encoding) || "utf-16le".equals(encoding)) return safe.getBytes(Charset.forName("UTF-16LE"));
-        if ("latin1".equals(encoding) || "ascii".equals(encoding)) return safe.getBytes(Charset.forName("ISO-8859-1"));
+        if ("latin1".equals(encoding) || "ascii".equals(encoding) || "iso-8859-1".equals(encoding)) return safe.getBytes(StandardCharsets.ISO_8859_1);
         return safe.getBytes(StandardCharsets.UTF_8);
     }
 

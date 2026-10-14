@@ -433,7 +433,7 @@ public final class MainActivity extends Activity implements NativeFileBridge.Arc
         if ("file".equals(scheme) && url.startsWith("file:///android_asset/")) return false;
         if ("http".equals(scheme) || "https".equals(scheme)) {
             String host = uri.getHost() == null ? "" : uri.getHost().toLowerCase(java.util.Locale.ROOT);
-            if ("localhost".equals(host) || "127.0.0.1".equals(host) || "::1".equals(host)) {
+            if ("localhost".equals(host) || "127.0.0.1".equals(host) || "::1".equals(host) || host.startsWith("127.")) {
                 openIsolatedPreview(uri);
                 return true;
             }
@@ -453,7 +453,8 @@ public final class MainActivity extends Activity implements NativeFileBridge.Arc
         if (uri == null || uri.getUserInfo() != null || uri.getPort() < 1 || uri.getPort() > 65535) return false;
         String scheme = uri.getScheme() == null ? "" : uri.getScheme().toLowerCase(java.util.Locale.ROOT);
         String host = uri.getHost() == null ? "" : uri.getHost().toLowerCase(java.util.Locale.ROOT);
-        return "http".equals(scheme) && ("localhost".equals(host) || "127.0.0.1".equals(host) || "::1".equals(host));
+        return ("http".equals(scheme) || "https".equals(scheme))
+                && ("localhost".equals(host) || "127.0.0.1".equals(host) || "::1".equals(host) || host.startsWith("127."));
     }
 
     private void openIsolatedPreview(Uri uri) {
