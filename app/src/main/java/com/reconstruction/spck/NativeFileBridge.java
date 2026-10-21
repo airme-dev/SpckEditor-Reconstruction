@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -52,6 +53,7 @@ public final class NativeFileBridge {
         void onArchiveOperationFinished(boolean success, String message);
         void onGitOperationFinished(String operation, boolean success, String resultJson);
         void onProjectCommandFinished(boolean success, String resultJson);
+        void onAppColorChanged(int color);
     }
 
     private static final class InvalidPathException extends IOException {
@@ -88,6 +90,32 @@ public final class NativeFileBridge {
     @JavascriptInterface
     public String getStorageDir() {
         return "/documents/";
+    }
+
+    @JavascriptInterface
+    public String getAppColor() {
+        return context.getSharedPreferences("spck_settings", Context.MODE_PRIVATE)
+                .getString("app_color", "#23293c");
+    }
+
+    @JavascriptInterface
+    public boolean setAppColor(String value) {
+        if (value == null || !value.matches("#[0-9a-fA-F]{6}")) return false;
+        final int color;
+        try {
+            color = Color.parseColor(value);
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
+        context.getSharedPreferences("spck_settings", Context.MODE_PRIVATE)
+                .edit()
+                .putString("app_color", value.toLowerCase(Locale.ROOT))
+                .apply();
+        mainHandler.post(() -> {
+            ArchiveCallbacks callbacks = archiveCallbacks.get();
+            if (callbacks != null) callbacks.onAppColorChanged(color);
+        });
+        return true;
     }
 
     /** Returns persistent, validated workspace metadata for the trusted editor tools overlay. */
@@ -521,27 +549,6 @@ public final class NativeFileBridge {
                 }
             } catch (Exception ignored) { }
         });
-    }
-
-    /**
-     * Read the current primary clip from the system clipboard and return it as plain text.
-     * Called from JavaScript to implement paste on file:// origin where
-     * navigator.clipboard.readText() is blocked.
-     */
-    @JavascriptInterface
-    public String getClipboard() {
-        try {
-            ClipboardManager manager = (ClipboardManager)
-                    context.getSystemService(Context.CLIPBOARD_SERVICE);
-            if (manager != null && manager.hasPrimaryClip()) {
-                ClipData clip = manager.getPrimaryClip();
-                if (clip != null && clip.getItemCount() > 0) {
-                    CharSequence text = clip.getItemAt(0).coerceToText(context);
-                    return text != null ? text.toString() : "";
-                }
-            }
-        } catch (Exception ignored) { }
-        return "";
     }
 
     /**

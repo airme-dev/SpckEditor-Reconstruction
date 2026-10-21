@@ -34,6 +34,9 @@ public final class MainActivity extends Activity implements NativeFileBridge.Arc
     private static final int REQUEST_IMPORT_ARCHIVE = 4103;
     private static final int REQUEST_EXPORT_ARCHIVE = 4104;
     private static final String START_URL = "file:///android_asset/index.html";
+    private static final String APP_COLOR_PREFERENCES = "spck_settings";
+    private static final String APP_COLOR_KEY = "app_color";
+    private static final int DEFAULT_APP_COLOR = Color.rgb(35, 41, 60);
     private static volatile boolean forceFreshStartAfterRendererExit;
     private static volatile long lastRendererRecoveryElapsedMs;
     private static final String PROJECT_ARCHIVE_TOOLS_SCRIPT = """
@@ -191,18 +194,12 @@ public final class MainActivity extends Activity implements NativeFileBridge.Arc
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setStatusBarColor(Color.rgb(35, 41, 60));
+        applyAppStatusBarColor(getSavedAppColor());
         getWindow().setNavigationBarColor(Color.rgb(9, 9, 11));
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // API 30+: let the editor window extend edge-to-edge and handle insets itself
-            // so the on-screen keyboard correctly resizes the content area.
+            // Keep edge-to-edge system bars while resizing the WebView above the keyboard.
             WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
-        } else {
-            //noinspection deprecation
-            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR ^ View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
 
         webView = new WebView(this);
@@ -574,6 +571,38 @@ public final class MainActivity extends Activity implements NativeFileBridge.Arc
             String safeResult = JSONObject.quote(resultJson == null ? "{}" : resultJson);
             webView.evaluateJavascript("if(window.__spckConsoleTools){window.__spckConsoleTools.setResult(" + success + "," + safeResult + ");}", null);
         });
+    }
+
+    @Override
+    public void onAppColorChanged(int color) {
+        runOnUiThread(() -> {
+            applyAppStatusBarColor(color);
+        });
+    }
+
+    private void applyAppStatusBarColor(int color) {
+        getWindow().setStatusBarColor(color);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) return;
+        View decorView = getWindow().getDecorView();
+        int flags = decorView.getSystemUiVisibility();
+        double luminance = (0.299 * Color.red(color)) + (0.587 * Color.green(color)) + (0.114 * Color.blue(color));
+        if (luminance > 160) {
+            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        } else {
+            flags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        }
+        decorView.setSystemUiVisibility(flags);
+    }
+
+    private int getSavedAppColor() {
+        String value = getSharedPreferences(APP_COLOR_PREFERENCES, MODE_PRIVATE)
+                .getString(APP_COLOR_KEY, "#23293c");
+        try {
+            return Color.parseColor(value);
+        } catch (IllegalArgumentException e) {
+            Log.w(TAG, "Ignoring invalid saved app color", e);
+            return DEFAULT_APP_COLOR;
+        }
     }
 
     @Override

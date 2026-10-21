@@ -40,6 +40,9 @@ public final class PreviewActivity extends Activity {
     public static final String EXTRA_URL = "com.reconstruction.spck.PREVIEW_URL";
     private static final String TAG = "SpckPreviewActivity";
 
+    private static final String APP_COLOR_PREFERENCES = "spck_settings";
+    private static final String APP_COLOR_KEY = "app_color";
+    private static final int DEFAULT_APP_COLOR = Color.rgb(35, 41, 60);
     private static final String PREFS_NAME = "spck_preview_settings";
     private static final String PREF_KEY_FULLSCREEN = "preview_fullscreen";
 
@@ -63,12 +66,14 @@ public final class PreviewActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setStatusBarColor(Color.rgb(30, 34, 45));
+        int appColor = getAppColor();
+        applyStatusBarColor(appColor);
         getWindow().setNavigationBarColor(Color.rgb(20, 22, 28));
 
         setContentView(R.layout.activity_preview);
 
         toolbarView = findViewById(R.id.preview_toolbar);
+        toolbarView.setBackgroundColor(appColor);
         titleView = findViewById(R.id.preview_title);
         subtitleView = findViewById(R.id.preview_subtitle);
         progressBar = findViewById(R.id.preview_progress);
@@ -120,6 +125,31 @@ public final class PreviewActivity extends Activity {
         if (!restored) {
             webView.loadUrl(initialUri.toString());
         }
+    }
+
+    private int getAppColor() {
+        String value = getSharedPreferences(APP_COLOR_PREFERENCES, MODE_PRIVATE)
+                .getString(APP_COLOR_KEY, "#23293c");
+        try {
+            return Color.parseColor(value);
+        } catch (IllegalArgumentException e) {
+            Log.w(TAG, "Ignoring invalid saved app color", e);
+            return DEFAULT_APP_COLOR;
+        }
+    }
+
+    private void applyStatusBarColor(int color) {
+        getWindow().setStatusBarColor(color);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) return;
+        View decorView = getWindow().getDecorView();
+        int flags = decorView.getSystemUiVisibility();
+        double luminance = (0.299 * Color.red(color)) + (0.587 * Color.green(color)) + (0.114 * Color.blue(color));
+        if (luminance > 160) {
+            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        } else {
+            flags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        }
+        decorView.setSystemUiVisibility(flags);
     }
 
     private void setupWebView() {
