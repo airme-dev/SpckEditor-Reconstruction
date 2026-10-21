@@ -1,19 +1,85 @@
 /**
- * Spck Android WebView Compatibility Patch  v2
+ * Spck Android WebView Compatibility Patch  v3
  *
+ * 0. Force touch-device mode so the editor keyboard toolbar is always visible.
+ *    Android WebView sometimes fails ontouchstart detection, making the UI
+ *    framework add sp-notouch to <html> which hides all toolbar buttons.
  * 1. Force zip.js to use in-thread pure-JS Inflater/Deflater (useWebWorkers = false).
  * 2. Blob-backed Worker fallback for file:// origin.
  * 3. Guard WebAssembly.instantiateStreaming on file:// origin.
  * 4. Yield file <input> click() to event loop for reliable file-picker trigger.
  * 5. Promise.any polyfill.
  * 6. navigator.clipboard polyfill (Android bridge-backed).
- *    The Async Clipboard API is blocked on file:// origin. This replaces
- *    navigator.clipboard with Android.setClipboard() / Android.getClipboard()
- *    so copyText2(), pasteText2(), cutText2() all work in the editor.
  * 7. Editor-keyboard toolbar dispatcher (window.__spckEditorAction).
  */
 (function (global) {
   'use strict';
+
+  /* ─────────────────────────────────────────────────────────────────────────
+   *  0.  Force touch-device mode — make the editor keyboard toolbar visible
+   *
+   *  The Spck UI framework (vendor.bundle.js) runs:
+   *    e.$html.addClass(e.support.touch ? "sp-touch" : "sp-notouch")
+   *  to toggle visibility of all hidden:"notouch" components including the
+   *  editor keyboard toolbar (se-editor-kb). On Android WebView the touch
+   *  check uses `"ontouchstart" in document.documentElement`, which can
+   *  return false before any touch event has fired. We guarantee the correct
+   *  class is set BEFORE the bundles run, and we watch the <html> element to
+   *  immediately swap sp-notouch → sp-touch if the framework writes it.
+   * ─────────────────────────────────────────────────────────────────────────*/
+  (function forceTouchMode() {
+    try {
+      // 1. Ensure the browser reports touch support
+      if (!('ontouchstart' in global.document.documentElement)) {
+        try {
+          Object.defineProperty(global.document.documentElement, 'ontouchstart', {
+            configurable: true, enumerable: true, get: function() { return null; }
+          });
+        } catch (e) { /* ignore — some engines protect this */ }
+      }
+
+      var html = global.document.documentElement;
+
+      // 2. Pre-set sp-touch now (before bundles load)
+      html.classList.remove('sp-notouch');
+      html.classList.add('sp-touch');
+
+      // 3. MutationObserver: if the framework later swaps back to sp-notouch, fix it
+      if (global.MutationObserver) {
+        var obs = new MutationObserver(function(mutations) {
+          mutations.forEach(function(m) {
+            if (m.attributeName === 'class') {
+              var cl = html.classList;
+              if (cl.contains('sp-notouch')) {
+                cl.remove('sp-notouch');
+                cl.add('sp-touch');
+              }
+            }
+          });
+        });
+        obs.observe(html, { attributes: true, attributeFilter: ['class'] });
+      }
+
+      // 4. Belt-and-suspenders CSS override: force the toolbar rows visible
+      //    even if sp-hidden-notouch slips through on some elements.
+      var style = global.document.createElement('style');
+      style.id = 'spck-touch-override';
+      style.textContent = [
+        /* Force keyboard toolbar row always visible */
+        '.sp-hidden-notouch { display: flex !important; }',
+        '.se-editor-kb { display: flex !important; }',
+        '.se-editor-kb.webix_hidden { display: flex !important; }',
+        /* Hide the extra AI prompt history key we dont use */
+        /* Keep the toolbar pinned above the soft keyboard */
+        '.se-editor-kb { position: relative; z-index: 100; }'
+      ].join('\n');
+      (global.document.head || global.document.documentElement).appendChild(style);
+
+      console.log('[SpckPatch] Touch mode forced: html.sp-touch set, MutationObserver watching.');
+    } catch (e) {
+      console.warn('[SpckPatch] forceTouchMode error:', e);
+    }
+  })();
 
   /* ─────────────────────────────────────────────────────────────────────────
    *  1.  zip.js: Force useWebWorkers = false
