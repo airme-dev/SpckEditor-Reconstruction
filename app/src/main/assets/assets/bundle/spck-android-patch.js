@@ -69,6 +69,7 @@
         '.sp-hidden-notouch { display: flex !important; }',
         '.se-editor-kb { display: flex !important; }',
         '.se-editor-kb.webix_hidden { display: flex !important; }',
+        '.se-editor-kb__container.hidden, .se-editor-kb__container.hidden2 { bottom: 0 !important; }',
         /* Hide the extra AI prompt history key we dont use */
         /* Keep the toolbar pinned above the soft keyboard */
         '.se-editor-kb { position: relative; z-index: 100; }'
@@ -240,9 +241,9 @@
         readText: function () {
           return new Promise(function (resolve, reject) {
             try {
-              var text = (typeof bridge.getClipboard === 'function')
-                ? bridge.getClipboard()
-                : '';
+              var text = typeof bridge.clipboardText === 'function'
+                ? bridge.clipboardText()
+                : (typeof bridge.getClipboard === 'function' ? bridge.getClipboard() : '');
               resolve(String(text == null ? '' : text));
             } catch (e) { reject(e); }
           });
