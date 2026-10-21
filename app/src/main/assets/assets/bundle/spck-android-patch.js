@@ -1,32 +1,29 @@
 /**
- * Spck Android WebView Compatibility Patch
+ * Spck Android WebView Compatibility Patch  v2
  *
- * 1. Force zip.js to use in-thread pure JS Inflater/Deflater (useWebWorkers = false).
- *    Android WebView blocks new Worker() on file:// origin. With useWebWorkers = false,
- *    zip.js uses the pure-JS zlib/jzlib Inflater built into vendor.bundle.js without workers.
- * 2. Fallback Worker construction via Blob URLs for any background language workers.
+ * 1. Force zip.js to use in-thread pure-JS Inflater/Deflater (useWebWorkers = false).
+ * 2. Blob-backed Worker fallback for file:// origin.
  * 3. Guard WebAssembly.instantiateStreaming on file:// origin.
- * 4. Yield file input click() to event loop for reliable file picker trigger.
- * 5. Polyfill Promise.any if needed.
+ * 4. Yield file <input> click() to event loop for reliable file-picker trigger.
+ * 5. Promise.any polyfill.
+ * 6. navigator.clipboard polyfill (Android bridge-backed).
+ *    The Async Clipboard API is blocked on file:// origin. This replaces
+ *    navigator.clipboard with Android.setClipboard() / Android.getClipboard()
+ *    so copyText2(), pasteText2(), cutText2() all work in the editor.
+ * 7. Editor-keyboard toolbar dispatcher (window.__spckEditorAction).
  */
 (function (global) {
   'use strict';
 
   /* ─────────────────────────────────────────────────────────────────────────
    *  1.  zip.js: Force useWebWorkers = false
-   *
-   *  vendor.bundle.js initializes window.zip. We intercept the definition and
-   *  lock useWebWorkers to false so that zip extraction and compression always
-   *  use the built-in pure JavaScript Inflater/Deflater.
    * ─────────────────────────────────────────────────────────────────────────*/
   try {
     var _zipInstance = undefined;
     Object.defineProperty(global, 'zip', {
       configurable: true,
       enumerable: true,
-      get: function () {
-        return _zipInstance;
-      },
+      get: function () { return _zipInstance; },
       set: function (val) {
         _zipInstance = val;
         if (_zipInstance && typeof _zipInstance === 'object') {
@@ -38,9 +35,7 @@
               get: function () { return false; },
               set: function () { /* locked to false */ }
             });
-          } catch (e) {
-            _zipInstance.useWebWorkers = false;
-          }
+          } catch (e) { _zipInstance.useWebWorkers = false; }
         }
       }
     });
@@ -49,12 +44,7 @@
   }
 
   /* ─────────────────────────────────────────────────────────────────────────
-   *  2.  Blob-backed Worker Fallback for file:// origin
-   *
-   *  If any other code calls new Worker(url) from file:///android_asset/,
-   *  the browser throws SecurityError. We catch this, fetch the script text
-   *  synchronously via XHR (which WebView permits for local assets), and
-   *  construct the real Worker using a Blob URL.
+   *  2.  Blob-backed Worker fallback for file:// origin
    * ─────────────────────────────────────────────────────────────────────────*/
   var _RealWorker = global.Worker;
   if (_RealWorker) {
@@ -64,7 +54,7 @@
       if (_scriptCache[url]) return _scriptCache[url];
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, false); // synchronous
+        xhr.open('GET', url, false);
         xhr.send(null);
         if (xhr.status === 0 || xhr.status === 200) {
           _scriptCache[url] = xhr.responseText;
@@ -92,16 +82,11 @@
         throw err;
       }
     };
-    try {
-      global.Worker.prototype = _RealWorker.prototype;
-    } catch (e) { /* ignore */ }
+    try { global.Worker.prototype = _RealWorker.prototype; } catch (e) { /* ignore */ }
   }
 
   /* ─────────────────────────────────────────────────────────────────────────
    *  3.  WebAssembly streaming guard
-   *
-   *  WebAssembly.instantiateStreaming fails on file:// origin with TypeError.
-   *  Reject immediately so libraries gracefully fallback to ArrayBuffer/JS.
    * ─────────────────────────────────────────────────────────────────────────*/
   try {
     if (global.WebAssembly && global.WebAssembly.instantiateStreaming) {
@@ -112,8 +97,9 @@
             return Promise.reject(new Error('SpckPatch: WASM streaming blocked on file:// origin'));
           }
         } catch (e) { /* ignore */ }
-        return _origInstStream ? _origInstStream.apply(global.WebAssembly, arguments)
-          : Promise.reject(new Error('SpckPatch: WebAssembly.instantiateStreaming not available'));
+        return _origInstStream
+          ? _origInstStream.apply(global.WebAssembly, arguments)
+          : Promise.reject(new Error('SpckPatch: instantiateStreaming not available'));
       };
     }
   } catch (e) { /* ignore */ }
@@ -157,6 +143,180 @@
     };
   }
 
-  console.log('[SpckPatch] Android WebView compatibility patch applied (pure JS zip, blob worker fallback).');
+  /* ─────────────────────────────────────────────────────────────────────────
+   *  6.  navigator.clipboard polyfill  (Android JavascriptInterface bridge)
+   *
+   *  Android WebView on file:// origin rejects every Clipboard API call with
+   *  NotAllowedError (requires secure context). Spck's copyText2() calls:
+   *    navigator.clipboard.writeText(text)
+   *  and pasteText2() calls:
+   *    navigator.clipboard.readText()
+   *  We replace navigator.clipboard with an object backed by
+   *  Android.setClipboard(text) and Android.getClipboard() — methods exposed
+   *  by NativeFileBridge via @JavascriptInterface.
+   * ─────────────────────────────────────────────────────────────────────────*/
+  (function patchClipboard() {
+    try {
+      var bridge = global.Android;
+      // Only patch when the Android bridge is present (i.e. in the editor WebView,
+      // not in the isolated preview WebView which has no native interface).
+      if (!bridge) return;
+
+      var androidClipboard = {
+        writeText: function (text) {
+          return new Promise(function (resolve, reject) {
+            try {
+              bridge.setClipboard(String(text == null ? '' : text));
+              resolve();
+            } catch (e) { reject(e); }
+          });
+        },
+        readText: function () {
+          return new Promise(function (resolve, reject) {
+            try {
+              var text = (typeof bridge.getClipboard === 'function')
+                ? bridge.getClipboard()
+                : '';
+              resolve(String(text == null ? '' : text));
+            } catch (e) { reject(e); }
+          });
+        },
+        read: function () {
+          return androidClipboard.readText().then(function (text) {
+            return [new ClipboardItem({
+              'text/plain': new Blob([text], { type: 'text/plain' })
+            })];
+          });
+        },
+        write: function (items) {
+          if (!items || !items.length) return Promise.resolve();
+          var item = items[0];
+          if (item && typeof item.getType === 'function') {
+            return item.getType('text/plain')
+              .then(function (blob) { return blob.text(); })
+              .then(function (text) { return androidClipboard.writeText(text); });
+          }
+          return Promise.resolve();
+        }
+      };
+
+      // Install polyfill
+      try {
+        Object.defineProperty(global.navigator, 'clipboard', {
+          configurable: true,
+          enumerable: true,
+          get: function () { return androidClipboard; }
+        });
+      } catch (defErr) {
+        try { global.navigator.clipboard = androidClipboard; } catch (e2) { /* ignore */ }
+      }
+
+      // Also patch document.execCommand('copy') — Spck's secondary fallback path
+      var _origExecCommand = document.execCommand
+        ? document.execCommand.bind(document)
+        : null;
+      document.execCommand = function (cmd) {
+        var lc = String(cmd || '').toLowerCase();
+        if (lc === 'copy' || lc === 'cut') {
+          try {
+            var sel = global.getSelection ? global.getSelection() : null;
+            var selectedText = sel ? sel.toString() : '';
+            if (!selectedText) {
+              // nothing selected — try active element value selection
+              var ae = document.activeElement;
+              if (ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA')) {
+                selectedText = ae.value.substring(ae.selectionStart, ae.selectionEnd);
+              }
+            }
+            if (selectedText) {
+              bridge.setClipboard(selectedText);
+              if (lc === 'cut') {
+                var sel2 = global.getSelection ? global.getSelection() : null;
+                if (sel2 && sel2.rangeCount > 0) {
+                  sel2.getRangeAt(0).deleteContents();
+                }
+              }
+              return true;
+            }
+          } catch (e) { /* ignore */ }
+          return false;
+        }
+        if (lc === 'paste') {
+          // Synchronous paste is not feasible; the async path handles this
+          return false;
+        }
+        return _origExecCommand
+          ? _origExecCommand.apply(document, arguments)
+          : false;
+      };
+
+      console.log('[SpckPatch] navigator.clipboard polyfill active (Android bridge).');
+    } catch (e) {
+      console.warn('[SpckPatch] clipboard polyfill error:', e);
+    }
+  })();
+
+  /* ─────────────────────────────────────────────────────────────────────────
+   *  7.  Editor toolbar action dispatcher  (window.__spckEditorAction)
+   *
+   *  Exposes a global dispatcher that maps action names to Ace editor commands.
+   *  Spck's bundled UI already wires most buttons, but on Android WebView some
+   *  paths are unreachable before the clipboard polyfill is in place (above).
+   *  Any code can call:
+   *    window.__spckEditorAction('undo')
+   *    window.__spckEditorAction('redo')
+   *    window.__spckEditorAction('copy')  // etc.
+   * ─────────────────────────────────────────────────────────────────────────*/
+  (function wireToolbar() {
+    function getActiveEditor() {
+      try {
+        var ui = global.$$;
+        if (typeof ui === 'function') {
+          var me = ui('mainEditor');
+          if (me && me.$editor && typeof me.$editor.execCommand === 'function') return me.$editor;
+          var pe = ui('promptEditor');
+          if (pe && pe.$editor && typeof pe.$editor.execCommand === 'function') return pe.$editor;
+        }
+      } catch (e) { /* ignore */ }
+      return null;
+    }
+
+    global.__spckEditorAction = function dispatchAction(action) {
+      var editor = getActiveEditor();
+      if (!editor) { return false; }
+      try {
+        switch (String(action)) {
+          case 'undo':
+            editor.undo ? editor.undo() : editor.execCommand('undo'); break;
+          case 'redo':
+            editor.redo ? editor.redo() : editor.execCommand('redo'); break;
+          case 'selectAll':
+            editor.selectAll ? editor.selectAll() : editor.execCommand('selectall'); break;
+          case 'copy':
+            if (typeof editor.copyText2 === 'function') editor.copyText2();
+            else { var t = editor.getSelectedText ? editor.getSelectedText() : '';
+              if (t && global.Android) global.Android.setClipboard(t); }
+            break;
+          case 'cut':
+            if (typeof editor.cutText2 === 'function') editor.cutText2(); break;
+          case 'paste':
+            if (typeof editor.pasteText2 === 'function') editor.pasteText2(); break;
+          case 'indent':    editor.execCommand('indent');        break;
+          case 'outdent':   editor.execCommand('outdent');       break;
+          case 'comment':   editor.execCommand('togglecomment'); break;
+          case 'find':      editor.execCommand('find');          break;
+          case 'gotoline':  editor.execCommand('gotoline');      break;
+          default:          editor.execCommand(action);          break;
+        }
+        return true;
+      } catch (e) {
+        console.warn('[SpckPatch] toolbar action error:', action, e);
+        return false;
+      }
+    };
+    console.log('[SpckPatch] Editor toolbar dispatcher ready (window.__spckEditorAction).');
+  })();
+
+  console.log('[SpckPatch] v2 applied: zip, blob-worker, WASM-guard, clipboard-bridge, toolbar-wire.');
 
 }(typeof globalThis !== 'undefined' ? globalThis : window));

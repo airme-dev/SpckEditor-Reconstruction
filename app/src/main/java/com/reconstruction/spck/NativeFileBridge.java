@@ -524,6 +524,27 @@ public final class NativeFileBridge {
     }
 
     /**
+     * Read the current primary clip from the system clipboard and return it as plain text.
+     * Called from JavaScript to implement paste on file:// origin where
+     * navigator.clipboard.readText() is blocked.
+     */
+    @JavascriptInterface
+    public String getClipboard() {
+        try {
+            ClipboardManager manager = (ClipboardManager)
+                    context.getSystemService(Context.CLIPBOARD_SERVICE);
+            if (manager != null && manager.hasPrimaryClip()) {
+                ClipData clip = manager.getPrimaryClip();
+                if (clip != null && clip.getItemCount() > 0) {
+                    CharSequence text = clip.getItemAt(0).coerceToText(context);
+                    return text != null ? text.toString() : "";
+                }
+            }
+        } catch (Exception ignored) { }
+        return "";
+    }
+
+    /**
      * Open an http/https URL in the device browser. Returns true if the intent was dispatched.
      * Alias for launchWebView with additional scheme validation for clarity.
      */
